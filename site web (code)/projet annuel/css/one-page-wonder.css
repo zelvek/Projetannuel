@@ -12,7 +12,7 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background: url('http://placehold.it/1900x500') no-repeat center center scroll;
+    background: url('../image/pop.jpg') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -24,9 +24,9 @@ body {
 }
 
 .headline h1 {
+  font-family: 'Cinzel', serif;
     font-size: 130px;
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+
 }
 
 .headline h2 {
