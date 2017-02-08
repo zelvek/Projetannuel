@@ -1,4 +1,5 @@
 <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
     <nav>
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
@@ -20,17 +21,20 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                       <li>
-                          <a href="#film">Film</a>
+                          <a href="#serie">Film</a>
                       </li>
                       <li>
-                          <a href="#serie">Serie</a>
+                          <a href="#film">Serie</a>
                       </li>
                       <li>
-                          <a href="#jeux">Jeux</a>
+                          <a href="#jeux">Animé</a>
                       </li>
                       <li>
                         <a href="chat.php"> Chat</a>
                       </li>
+                      <li>
+                        <a href="option.php"> Option </a>
+                        <li>
 
                   </ul>
               </div>
