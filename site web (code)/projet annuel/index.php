@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body id="fond">
 
   <?php include("menu.php"); ?>
 
