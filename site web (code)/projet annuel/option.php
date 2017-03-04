@@ -28,59 +28,22 @@
 
 <body>
 
-  <?php include("menu.php"); ?>
+  <?php include("part/menu.php"); ?>
 
 
 
 
-  <hr class="featurette-divider">
-  <div class="col-xs-4 container">
-  <!-- First Featurette -->
-  <div class="featurette " id="film ">
-      <img class="featurette-image img-circle img-responsive pull-right" src="image/poke.jpg">
-      <h2 class="featurette-heading">Film
-          <span class="text-muted">Filmfilm Film </span>
-      </h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-</div>
 
-
-
-  <hr class="featurette-divider">
-<div class="col-xs-4 container">
-  <!-- First Featurette -->
-  <div class="featurette" id="film ">
-      <img class="featurette-image img-circle img-responsive pull-right" src="image/poke.jpg">
-      <h2 class="featurette-heading">Film
-          <span class="text-muted">Filmfilm Film </span>
-      </h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-</div>
-
-
-  <hr class="featurette-divider">
-<div class="col-xs-4 container">
-  <!-- First Featurette -->
-  <div class="featurette" id="film ">
-      <img class="featurette-image img-circle img-responsive pull-right" src="image/poke.jpg">
-      <h2 class="featurette-heading">Film
-          <span class="text-muted">Filmfilm Film </span>
-      </h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-</div>
     <!-- Page Content -->
     <div class="container">
 
-  <?php include("utilisateur.php") ?>
+  <?php include("part/utilisateur.php") ?>
 
         <hr class="featurette-divider">
 
         <!-- Footer -->
 
-            <?php include("footer.php"); ?>
+            <?php include("part/footer.php"); ?>
 
 
     </div>

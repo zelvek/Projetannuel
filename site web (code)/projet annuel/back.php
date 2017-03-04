@@ -13,11 +13,10 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,24 +26,62 @@
 
 </head>
 
-<body id="fond">
+<body>
+
+
+
 
   <?php include("part/menu.php"); ?>
 
 
-    <!-- Page Content -->
-    <div class="container">
-
-        <?php include ("part/film.php"); ?>
-
-        <?php include ("part/serie.php"); ?>
-
-          <?php include ("part/jeux.php"); ?>
 
 
-        <hr class="featurette-divider">
 
-        <!-- Footer -->
+
+
+
+
+
+
+    <div class="row">
+    <div class="col-xs-12 col-lg-12 ">
+    <div class="col-lg-3"></div>
+    <a href="#" class="myButton btn btn-send col-lg-6"  target=_blank>Utilisateurs</a>
+    <div class="col-lg-3"></div>
+    </div>
+    </div>
+
+
+
+    <div class="row">
+    <div class="col-xs-12 col-lg-12 ">
+    <div class="col-lg-3"></div>
+    <a href="part/ajoutf.php" class="myButton btn btn-send col-lg-6"target="_blank">Ajout Film</a> <br>
+    <div class="col-lg-3"></div>
+    </div>
+    </div>
+
+
+    <div class="row">
+    <div class="col-xs-12 col-lg-12 ">
+    <div class="col-lg-3"></div>
+    <a href="#" class="myButton btn btn-send col-lg-6">inconnu</a> <br>
+    <div class="col-lg-3"></div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <?php include("part/footer.php"); ?>
 

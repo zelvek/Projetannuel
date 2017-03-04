@@ -1,7 +1,12 @@
-<hr class="featurette-divider">
+
+
+<section>
+
+
+
 
 <!-- Third Featurette -->
-<div class="featurette" id="jeux">
+<div class="featurette" id="jeux" class="taille">
     <img class="featurette-image img-circle img-responsive pull-right" src="image/ps4.jpg">
     <h2 class="featurette-heading">Animé
         <span class="text-muted">Animé Animé Animé Animé </span>
@@ -15,3 +20,4 @@
 <a href="chat.php" target="_parent"> mon lien </a>
 
 </div>
+</section>
