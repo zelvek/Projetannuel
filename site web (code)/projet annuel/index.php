@@ -1,62 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+session_start();
+include "header.php";
+require "functions.php";
+require "conf.inc.php";
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>LECTUS</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/one-page-wonder.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="fond">
-
-  <?php include("menu.php"); ?>
+ ?>
 
 
-    <!-- Page Content -->
-    <div class="container">
+ <section>
+<?php
+ /*helloWorld();
 
-        <?php include ("film.php"); ?>
+helloYou("Pierre");
+$x = 12;
+if ( isPrime($x) ) {
+  echo $x."est un nombre premier";
 
-        <?php include ("serie.php"); ?>
+}else {
+  echo $x."n'est pas un nombre premier";
+}
 
-          <?php include ("jeux.php"); ?>
+ ?>
 
-
-        <hr class="featurette-divider">
-
-        <!-- Footer -->
-
-            <?php include("footer.php"); ?>
+*/
 
 
-    </div>
-    <!-- /.container -->
+// formualaire inscription test de QI
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+//gender => radio
+//name   => text
+//surname => text
+//birthday => date
+//nickname => text
+//email => email
+//mdp => password
+//mdp confimation => password
+//country => list => select
+//legacy (CGU) => checkbox
+//bouton de validation => submit
+//
+echo "<div>";
+if(!empty($_SESSION["errors_form"])){
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+echo "<ul>";
+foreach ($_SESSION["errors_form"] as $key => $errors) {
+echo "<li>".$listOfErrors[$errors]."</li>";
+}
+echo "<ul>";
+unset($_SESSION["errors_form"]);
+//session_destroy();
+$data_form = $_SESSION["data_form"];
 
-</body>
+}
 
-</html>
+
+?>
+
+<form method="post" action="saveUser.php"> <!-- get = dans l'url et port non visible   -->
+
+
+
+
+  <label>
+
+<!-- label sert a cocher avec les lettres  -->
+<?php
+
+$genderDefault = (isset($data_form["gender"]))?$data_form["gender"]:"m";
+
+
+
+
+foreach ($listOfGender as $key => $gender) {
+echo "<label>".$gender.'  : <input type="radio" '.( ($key == $genderDefault)?'checked = "checked"':'').'name="gender" value="'.$key.'"></label>';
+
+}
+?>
+
+<br>
+<input type="text" name="name"placeholder="Votre nom" value=<?php echo (isset($data_form["name"]))?$data_form["name"]:"";?>> <br>
+
+
+
+<input type="text" name="surname"placeholder="Votre surname"value="<?php echo (isset($data_form["surname"]))?$data_form["surname"]:"";?>"><br>
+<input type="text" name="nickname"placeholder="Votre nickname"value="<?php echo (isset($data_form["nickname"]))?$data_form["nickname"]:"";?>" required="required" ><br>
+<input type="date" name="birthday" value="<?php echo (isset($data_form["birthday"]))?$data_form["birthday"]:"";?>" required="required"><br>
+<input type="email" name="email" value="<?php echo (isset($data_form["email"]))?$data_form["email"]:"";?>" required="required" placeholder="Votre email"><br>
+<input type="password" name="pwd" value="" required="required" placeholder="Votre mdp"><br>
+<input type="password" name="pwd2" value=""  required="required" placeholder="confirmation"><br>
+<select name="country">
+
+<?php
+$countryDefault = (isset($data_form["country"]))?$data_form["country"]:"pl";
+
+
+foreach ($listOfCountry as $key => $country) {
+echo '<option value="'.$key.'"';
+echo ($countryDefault == $key)?'selected = "selected"':'';
+echo '>'.$country."</option>";
+
+
+
+}
+
+
+
+
+ ?>
+
+<!-- checked = checked  c'est pour check avant-->
+
+
+
+</select> <br>
+<label>
+j'accepte les CGUs  <input type="checkbox" name="legacy" required="required"><br>
+</label>
+</select>
+
+
+
+<input type="submit" value="S'inscrire"><br>
+
+<img src="captcha.php" alt=""> <br>
+<input type="text" name="captcha"placeholder="recopier le captcha"value="" required="required" ><br>
+
+</div>
+</form>
+
+
+
+
+
+ </section>
+
+ <?php
+
+include "footer.php";
+
+  ?>

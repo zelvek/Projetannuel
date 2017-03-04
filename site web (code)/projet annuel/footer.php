@@ -1,6 +1,9 @@
-    <footer>
-        @Lectus Project
-    </footer>
 
-  </body>
+<footer>
+
+©zelvek
+
+</footer>
+
+</body>
 </html>
