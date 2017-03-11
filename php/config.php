@@ -3,7 +3,7 @@
 define('DB_USER', 'root');
 define('DB_PWD', 'asd-190lectus');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'lectus_project');
+define('DB_NAME', 'Lectus_project');
 
 $listOfCountry = [
 
