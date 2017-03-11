@@ -1,7 +1,7 @@
 <?php
 
 define('DB_USER', 'root');
-define('DB_PWD', '');
+define('DB_PWD', 'asd-190lectus');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'lectus_project');
 
