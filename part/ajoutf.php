@@ -5,11 +5,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Ajout</title>
+
+
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <link href="../css/one-page-wonder.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../image/icone.png" />
+
+
   </head>
-  <body>
+ <body id="fond">
+
+    <?php include("menu.php"); ?>
 
     <?php
     require "../php/conf.inc.php" ;
+
+
 
     ?>
 
