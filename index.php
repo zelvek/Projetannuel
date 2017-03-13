@@ -47,7 +47,7 @@
          <div class="col-lg-12">
            <div class="row">
 
-             <a href="inscription.php" class="myButton col-lg-2 col-lg-push-2"  target=_blank>inscription</a>
+             <a href="lectus.fr/inscription.php" class="myButton col-lg-2 col-lg-push-2"  target=_blank>inscription</a>
 
 
 
