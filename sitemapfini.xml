@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8">
+
+<site name="lectus">
+
+
+  <url page ="index.php">
+    <language>fr</language>
+    <accès>utilisateur<accès>
+  </url>
+  <url page ="back.php">
+    <language>fr</language>
+    <accès>admin<accès>
+  </url>
+  <url page ="index2.php">
+    <language>fr</language>
+    <accès>utilisateur_connecté<accès>
+  </url>
+  <url page ="inscription.php">
+    <language>fr</language>
+    <accès>utilisateur<accès>
+  </url>
+  <url page ="option.php">
+    <language>fr</language>
+    <accès>utilisateur_connecté<accès>
+  </url>
+  <url page ="connexion.php">
+    <language>fr</language>
+    <accès>utilisateur<accès>
+  </url>
+  <url page ="pageparfilm.php">
+    <language>fr</language>
+    <accès>utilisateur_connecté<accès>
+  </url>
+  <url page ="chatbox.php">
+    <language>fr</language>
+    <accès>utilisateur_connecté<accès>
+  </url>
+  <url page ="evènement.php">
+    <language>fr</language>
+    <accès>utilisateur_connecté<accès>
+  </url>
+
+
+
+</site>
