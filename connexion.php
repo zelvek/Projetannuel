@@ -1,13 +1,14 @@
 <?php
 include "part/header.php";
-require "php/connexionCheck.php";
+
 
  ?>
  <section>
    <h1>Vous etes sur la page de connexion</h1>
-   <form method = "post" action = "connexionCheck.php">
-     <input type = "text" name = "checkPseudo" placeholder = "Votre pseudo" value = "<?php echo (isset($data_form["checkPseudo"]))?$data_form["checkPseudo"]:"";?>" required = "required" ><br>
-     <input type = "text" name = "checkPass" placeholder = "Votre Password" value = "<?php echo (isset($data_form["checkPass"]))?$data_form["checkPass"]:"";?>" require = "required" ><br>
+   <form method = "post" action = "php/connexionCheck.php">
+     <input type = "text" name = "email" placeholder = "Votre email" value = "" required = "required" ><br>
+     <input type = "text" name = "pwd" placeholder = "Votre Password" value = "" require = "required" ><br>
+     <input type ="submit" value="Connexion">
    </form>
  </section>
  <?php
