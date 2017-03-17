@@ -30,7 +30,19 @@
 
 <body id="fond">
 
-  <?php include("part/menu.php"); ?>
+  <?php
+
+
+
+  include("part/menu.php");
+require "php/user_connect.php"; 
+
+
+
+
+
+
+  ?>
 
 
     <!-- Page Content -->

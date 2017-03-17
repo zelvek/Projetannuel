@@ -1,8 +1,8 @@
 <?php
 
-
-
+session_start();
 require "config.php";
+require "user_connect.php";
 
 try{
     $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME , DB_USER, DB_PWD); // /!\ connection à la base de données /!\
@@ -18,6 +18,8 @@ try{
 
 
 
+
+cookieset();
 header( 'Location: ../index2.php');
 
 
