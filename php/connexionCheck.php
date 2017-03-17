@@ -16,9 +16,13 @@ try{
     $query->execute(["email" =>$_POST["email"]] );
     if( password_verify($_POST["pwd"], $query->fetch()["pwd"])){
 
-  echo("you are connected !");
+
+
+header( 'Location: ../index2.php');
+
+
   }
 
   else {
-    echo("oh... fail");
+    echo("");
   }

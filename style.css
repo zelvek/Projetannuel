@@ -5,6 +5,14 @@
         margin-top: 25%;
     }
 
+    .left {
+        margin-left: -5% !important;
+    }
+
+    .test2 {
+        margin-left: -17% !important;
+    }
+
     #inscrip {
         display: inline-block;
         float: left;
