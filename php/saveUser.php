@@ -148,7 +148,7 @@ header('Location: ../inscription.php');
 
 }else {
 
-$query = $db->prepare("INSERT INTO users (gender,name,surname,nickname,pwd,email,birthday,country) VALUES (:gender ,:name ,:surname ,:nickname ,:pwd ,:email ,:birthday ,:country )");
+$query = $db->prepare("INSERT INTO USERS (gender,name,surname,nickname,pwd,email,birthday,country) VALUES (:gender ,:name ,:surname ,:nickname ,:pwd ,:email ,:birthday ,:country )");
 $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 $query->execute([
