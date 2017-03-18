@@ -148,18 +148,18 @@ header('Location: ../inscription.php');
 
 }else {
 
-$query = $db->prepare("INSERT INTO USERS (gender,name,surname,nickname,pwd,email,birthday,country) VALUES (:gender ,:name ,:surname ,:nickname ,:pwd ,:email ,:birthday ,:country )");
+$query = $db->prepare("INSERT INTO USERS (Gender,Name,Surname,Nickname,Pwd,Email,Birthday,Country) VALUES (:gender ,:name ,:surname ,:nickname ,:pwd ,:email ,:birthday ,:country )");
 $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 $query->execute([
-  "gender"=>$_POST["gender"],
-"name"=>$_POST["name"],
-"surname"=>$_POST["surname"],
-"nickname"=>$_POST["nickname"],
-"email"=>$_POST["email"],
-"pwd"=>$pwd,
-"birthday"=>$year."-".$month."-".$day,
-"country"=>$_POST["country"] ]);
+  "Gender"=>$_POST["gender"],
+"Name"=>$_POST["name"],
+"Surname"=>$_POST["surname"],
+"Nickname"=>$_POST["nickname"],
+"Email"=>$_POST["email"],
+"Pwd"=>$pwd,
+"Birthday"=>$year."-".$month."-".$day,
+"Country"=>$_POST["country"] ]);
 header( 'Location ../index2.php');
 
 
