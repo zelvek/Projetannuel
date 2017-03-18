@@ -132,7 +132,7 @@ if( strlen($_POST["birthday"]) == 10 ){
 
 
 
-  $query = $db->prepare('SELECT id FROM Users WHERE Email=:email');
+  $query = $db->prepare('SELECT Id FROM USERS WHERE Email=:email');
   $query->execute(["Email" => $_POST["email"]]);
   $resultat = $query->fetch();
 
