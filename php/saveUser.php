@@ -160,9 +160,9 @@ $query->execute([
 "Pwd"=>$pwd,
 "Birthday"=>$year."-".$month."-".$day,
 "Country"=>$_POST["country"] ]);
-header( 'Location ../index2.php');
+//header( 'Location ../index2.php');
 
-
+print_r($dbh->errorInfo());
   }
 
 }
