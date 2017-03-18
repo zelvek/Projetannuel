@@ -161,7 +161,7 @@ $query->execute([
 "Birthday"=>$year."-".$month."-".$day,
 "Country"=>$_POST["country"] ]);
 //header( 'Location ../index2.php');
-print_r($db->errorInfo());
+print_r($query->errorInfo());
 
   }
 
