@@ -42,7 +42,7 @@
 
     <form class="" action="adminutilisateur.php" method="post">
 
-    <input type="Email" name="user_email" value=""><br>
+    <input type="email" name="user_email" value=""><br>
     <input type="submit" value="submit">
 
 
@@ -55,7 +55,7 @@
 
     try{
 
-    $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_Pwd);
+    $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD);
 
     }catch(Exception $e){
     die("erreur SQL :".$e->getMessage());
@@ -69,7 +69,7 @@
     && !empty($_POST["user_email"])){
 
 
-      if(!filter_var($_POST["user_email"], FILTER_VALIDATE_Email)){
+      if(!filter_var($_POST["user_email"], FILTER_VALIDATE_EMAIL)){
         $error = true;
         $listOfErrors[] = 6;
       }
@@ -85,7 +85,7 @@
 
 
 
-    $query = $db->prepare("SELECT Name FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT name FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -110,7 +110,7 @@
       die ("l'utilisateur n'existe pas");
     }
 
-    $query = $db->prepare("SELECT surname FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT surname FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -130,7 +130,7 @@
     }
 
 
-    $query = $db->prepare("SELECT Nickname FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT nickname FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -143,12 +143,12 @@
     if(!empty($result[0])){
 
     foreach ($result[0] as $value) {
-      echo "le Nickname est : ".$value;
+      echo "le nickname est : ".$value;
       echo "<br>";
     }
 
     }
-    $query = $db->prepare("SELECT Pwd FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT pwd FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -162,7 +162,7 @@
 
     foreach ($result[0] as $value) {
       echo "ATTENTION LE MDP EST CRYPTEE        ";
-      echo "le Pwd est : ".$value;
+      echo "le PWD est : ".$value;
       echo "<br>";
     }
 
@@ -187,10 +187,10 @@
 
     }
 
-    echo "L'Email est :".$_POST["user_email"];
+    echo "L'email est :".$_POST["user_email"];
     echo "<br>";
 
-    $query = $db->prepare("SELECT Birthday FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT birthday FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -210,7 +210,11 @@
     }
 
 
+<<<<<<< HEAD
     $query = $db->prepare("SELECT Country FROM USERS WHERE Email=?");
+=======
+    $query = $db->prepare("SELECT country FROM users WHERE email=?");
+>>>>>>> parent of d9358aa... marche 1.1
 
     $query->execute([$_POST["user_email"]]);
 
@@ -230,7 +234,7 @@
     }
 
 
-    $query = $db->prepare("SELECT Date_inserted FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT date_inserted FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
