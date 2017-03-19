@@ -40,7 +40,7 @@
 
 
 
-    <form class="" action="adminutilisateur.php" method="post">
+    <form class="" action="verif.php" method="post">
 
     <input type="email" name="user_email" value=""><br>
     <input type="submit" value="submit">
@@ -85,7 +85,7 @@
 
 
 
-    $query = $db->prepare("SELECT name FROM users WHERE email=?");
+    $query = $db->prepare("SELECT Name FROM USERS WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -132,7 +132,7 @@
     }
 
 
-    $query = $db->prepare("SELECT nickname FROM users WHERE email=?");
+    $query = $db->prepare("SELECT Nickname FROM USERS WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -150,7 +150,7 @@
     }
 
     }
-    $query = $db->prepare("SELECT pwd FROM users WHERE email=?");
+    $query = $db->prepare("SELECT Pwd FROM USERS WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -173,7 +173,7 @@
 
     ?>
 
-    <form class="" action="adminutilisateur.php" method="post">
+    <form class="" action="Verif.php" method="post">
       <input type="text" name="" value="" placeholder="mot de passe" >
       <input type="text" name="" value="" placeholder="confirmez le mot de passe" >
     <input type="submit" name="" value="Changer le mot de passe">
@@ -194,7 +194,7 @@
     echo "L'email est :".$_POST["user_email"];
     echo "<br>";
 
-    $query = $db->prepare("SELECT birthday FROM users WHERE email=?");
+    $query = $db->prepare("SELECT Birthday FROM USERS WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -235,9 +235,9 @@
     }
 
 
-    $query = $db->prepare("SELECT date_inserted FROM users WHERE email=?");
-
+    $query = $db->prepare("SELECT Date_inserted FROM USERS WHERE Email=?");
     $query->execute([$_POST["user_email"]]);
+
 
 
     echo $query->errorInfo()[2];
