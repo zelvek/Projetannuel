@@ -12,7 +12,7 @@
 
     <link href="../css/one-page-wonder.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="../image/icone.png" />
+    <link rel="shortcut icon" type="image/png" href="../image/icon.png" />
 
 
   </head>
@@ -28,7 +28,8 @@
     ?>
 
 
-<h1>AJOUT</h1>
+
+
 
 
 
@@ -54,15 +55,45 @@
   ?>
 </section>
 
+<center>
+<div>
+<h1>AJOUT</h1>
 
+<table width="95%" border="0">
 
 <form class="" action="../php/savefilm.php" method="post"><br>
 <input type="text" name="picture" placeholder="lien de la photo" value="" required="required"><br>
 <input type="text" name="title" value="" placeholder="titre du film" required="required"><br>
+
+
+<tr>
+<td>
+
 <input type="text" name="realisateur" value="" placeholder="nom du réalisateur principal" required="required"><br>
+</td>
+
+<td>
 <input type="text" name="acteur" value="" placeholder="nom de l'acteur principal" required="required"><br>
+
+</td>
+</tr>
+
+
+<tr>
+</td>
+
 <input type="text" name="description" value="" placeholder="description" required="required"><br>
+</td>
+
+<td>
 <input type="date" name="sortie" value="" required="required"><br>
+
+</td>
+</tr>
+</div>
+
+
+
 
 catégorie : <select name="categorie"><br>
 
@@ -79,11 +110,9 @@ catégorie : <select name="categorie"><br>
 
 
   }
-
-
-
 ?>
 </select><br>
+
 
 
 
@@ -103,20 +132,27 @@ genre : <select name="genre"><br>
 
 ?>
 </select><br>
-
+</tr>
 <input type="submit" value="AJOUTER"><br>
+</tr>
+
+
+</form>
+</div>
+</center>
 
 
 
 
 
 
+<table border="0" width="85%" align="center" >
 
+<tbody>
+  <tr
+</tbody>
 
-
-
-
-
+</table>
 
 
 </form>

@@ -1377,18 +1377,24 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #fff;
+    background-color: #596668;
+
 }
 
 input, button, select, textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    margin-left: 200px;
+color: white;
+text-decoration: none;
+
 }
 
 a {
     color: #337ab7;
     text-decoration: none;
+    
 }
 
 a:hover, a:focus {
@@ -7005,3 +7011,7 @@ button.close {
 
 
 /*# sourceMappingURL=bootstrap.css.map */
+#lectus{
+color: white;
+text-decoration: none;
+}

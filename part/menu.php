@@ -49,7 +49,7 @@
     <header class="header-image">
         <div class="headline">
             <div class="container">
-                <h1>LECTUS</h1>
+                <h1><a href="index2.php" id="lectus">LECTUS</a></h1>
 
             </div>
         </div>
