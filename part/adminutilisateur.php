@@ -156,6 +156,8 @@
     echo $query->errorInfo()[2];
 
 
+
+
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
     if(!empty($result[0])){
