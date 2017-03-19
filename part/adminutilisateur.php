@@ -210,7 +210,7 @@
     }
 
 
-    $query = $db->prepare("SELECT country FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Country FROM USERS WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
