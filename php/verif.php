@@ -110,11 +110,9 @@
       die ("l'utilisateur n'existe pas");
     }
 
-<<<<<<< HEAD:part/verification.php
+
     $query = $db->prepare("SELECT Surname FROM USERS WHERE Email=?");
-=======
-    $query = $db->prepare("SELECT surname FROM users WHERE email=?");
->>>>>>> parent of d9358aa... marche 1.1:part/adminutilisateur.php
+
 
     $query->execute([$_POST["user_email"]]);
 
@@ -215,14 +213,9 @@
 
     }
 
-
-<<<<<<< HEAD:part/verification.php
-<<<<<<< HEAD
     $query = $db->prepare("SELECT Country FROM USERS WHERE Email=?");
 
-=======
-    $query = $db->prepare("SELECT country FROM users WHERE email=?");
->>>>>>> parent of d9358aa... marche 1.1:part/adminutilisateur.php
+
 
     $query->execute([$_POST["user_email"]]);
 
