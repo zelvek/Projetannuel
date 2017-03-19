@@ -85,7 +85,7 @@
 
 
 
-    $query = $db->prepare("SELECT Name FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT name FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -110,7 +110,11 @@
       die ("l'utilisateur n'existe pas");
     }
 
+<<<<<<< HEAD:part/verification.php
     $query = $db->prepare("SELECT Surname FROM USERS WHERE Email=?");
+=======
+    $query = $db->prepare("SELECT surname FROM users WHERE email=?");
+>>>>>>> parent of d9358aa... marche 1.1:part/adminutilisateur.php
 
     $query->execute([$_POST["user_email"]]);
 
@@ -130,7 +134,7 @@
     }
 
 
-    $query = $db->prepare("SELECT Nickname FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT nickname FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -148,7 +152,7 @@
     }
 
     }
-    $query = $db->prepare("SELECT Pwd FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT pwd FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -192,7 +196,7 @@
     echo "L'email est :".$_POST["user_email"];
     echo "<br>";
 
-    $query = $db->prepare("SELECT Birthday FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT birthday FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -212,9 +216,13 @@
     }
 
 
+<<<<<<< HEAD:part/verification.php
 <<<<<<< HEAD
     $query = $db->prepare("SELECT Country FROM USERS WHERE Email=?");
 
+=======
+    $query = $db->prepare("SELECT country FROM users WHERE email=?");
+>>>>>>> parent of d9358aa... marche 1.1:part/adminutilisateur.php
 
     $query->execute([$_POST["user_email"]]);
 
@@ -234,7 +242,7 @@
     }
 
 
-    $query = $db->prepare("SELECT Date_inserted FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT date_inserted FROM users WHERE email=?");
 
     $query->execute([$_POST["user_email"]]);
 
