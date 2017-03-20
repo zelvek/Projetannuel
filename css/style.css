@@ -70,10 +70,9 @@ html, body {
 
 .taille {
     height: 40vh;
+    right: 50px;
     padding: 200px;
 }
-
-
 
 #jeux {
     background-image: url("../image/fond.jpg") !important;
@@ -82,18 +81,16 @@ html, body {
 #film {
     background-image: url("../image/fond.jpg") !important;
 }
-.format{
 
+.format {
     margin-left: 110px !important;
     height: 40vh;
     padding: 20px;
     display: inline;
     width: 100px;
-    
     text-align: left;
-
-
 }
+
 
 /* Boutons back */
 
@@ -135,13 +132,16 @@ html, body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9', GradientType=0);
     background-color: #e9e9e9;
 }
-#recherche{
 
+#recherche {
     margin-left: 110px !important;
     display: inline;
 }
 
-#lectus{
-color: white;
-text-decoration: none;
+#lectus {
+    color: white;
+    text-decoration: none;
+}
+
+
 }
