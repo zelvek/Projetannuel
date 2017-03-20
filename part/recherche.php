@@ -1,4 +1,4 @@
-
+<center>
 <label action="Resultat_recherche.php?" method="post">
 
 
@@ -9,4 +9,6 @@
 <input type="submit" value="recherche">
 
 </label>
+
+</center>
 <br><br>
