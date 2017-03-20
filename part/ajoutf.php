@@ -156,6 +156,7 @@ genre : <select name="genre"><br>
 
 
 </form>
+</center>
 
 
   </body>
