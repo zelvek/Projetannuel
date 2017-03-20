@@ -1,4 +1,4 @@
-
+<center>
 <label action="Resultat_recherche.php?" method="post">
 
 
@@ -10,3 +10,4 @@
 
 </label>
 <br><br>
+</center>
