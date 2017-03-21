@@ -129,7 +129,7 @@ if ($error) {
 
 
 
-  $query = $db->prepare("INSERT INTO film (picture,title,realisateur,acteur,description,sortie,categorie,genre) VALUES (:picture ,:title ,:realisateur ,:acteur ,:description ,:sortie ,:categorie ,:genre )");
+  $query = $db->prepare("INSERT INTO film (Picture,Title,Staff,acteur,description,sortie,categorie,genre) VALUES (:picture ,:title ,:realisateur ,:acteur ,:description ,:sortie ,:categorie ,:genre )");
   $query->execute([
     "picture"=>$_POST["picture"],
   "title"=>$_POST["title"],
