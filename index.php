@@ -14,6 +14,10 @@
   Lectus
 </section>
 
+<script scr="js/bulle.js">
+
+</script>
+
 
 <div class="container">
       <div class="row">
