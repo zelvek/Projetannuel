@@ -16,9 +16,9 @@ setcookie("user_lectus", AUTH_US, time() +3600, '/Projetannuel/'  );
 
 
 
-$query = $db->prepare("UPDATE users SET is_connected = :is_connected WHERE email = :email");
-$query->execute(["is_connected"=>AUTH_US,
-                  "email"=>$_POST["email"]]);
+$query = $db->prepare("UPDATE USERS SET Is_connected = :Is_connected WHERE Email = :Email");
+$query->execute(["Is_connected"=>AUTH_US,
+                  "Email"=>$_POST["Email"]]);
 
 
 
