@@ -1,10 +1,243 @@
 html, body {
-    /* suppression des éventuels styles par défaut */
+
     margin: 0;
     padding: 0;
-    /* on spécifie un repère pour le calcul des hauteurs */
     height: 100%;
+    background-image: url('https://i.ytimg.com/vi/5znji1uGNIs/maxresdefault.jpg');
 }
+
+
+body {
+    position: fixed;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 25%;
+}
+
+
+input{
+
+color: black !important;
+
+}
+option{
+color: black !important;
+
+}
+
+select{
+color: black !important;
+
+
+}
+
+.left {
+    margin-left: -5% !important;
+}
+
+.test2 {
+    margin-left: -17% !important;
+}
+
+#inscrip {
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+
+.myButton {
+    -moz-box-shadow: inset 0px 0px 0px 0px #97c4fe;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #97c4fe;
+    box-shadow: inset 0px 0px 0px 0px #97c4fe;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0));
+    background: -moz-linear-gradient(top, #FEFEFE 5%, #FEFEFE 20%);
+    background: -webkit-linear-gradient(top, #FEFEFE 5%, #FEFEFE 20%);
+    background: -o-linear-gradient(top, #FEFEFE 5%, #FEFEFE 20%);
+    background: -ms-linear-gradient(top, #FEFEFE 5%, #FEFEFE 20%);
+    background: linear-gradient(to bottom, #FEFEFE 5%, #FEFEFE 20%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0', GradientType=0);
+    background-color: #000;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border: 3px solid #FEFEFE;
+    display: inline-block;
+    cursor: pointer;
+    color: #FEFEFE;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 13px 49px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #FEFEFE;
+    margin-left: -10%;
+    margin-top: 10%;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.myButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6));
+    background: -moz-linear-gradient(top, #DEE6E5 5%, #DEE6E5 100%);
+    background: -webkit-linear-gradient(top, #DEE6E5 5%, #DEE6E5 100%);
+    background: -o-linear-gradient(top, #DEE6E5 5%, #DEE6E5 100%);
+    background: -ms-linear-gradient(top, #DEE6E5 5%, #DEE6E5 100%);
+    background: linear-gradient(to bottom, #DEE6E5 5%, #DEE6E5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6', GradientType=0);
+    background-color: #DEE6E5;
+    color: black;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+    color: black;
+}
+
+.lectus {
+    margin-left: -4%;
+    margin-right: 50%;
+    margin-top: -10%;
+    color: black;
+    font-size: 50px;
+}
+
+
+.image {
+    width: 22%;
+    float: left;
+    margin-top: -20%;
+    margin-left: 40%;
+}
+
+.image2 {
+    width: 20%;
+    float: left;
+    margin-top: -27%;
+    margin-left: -57%;
+}
+
+
+
+
+
+
+
+
+#kw-result {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.kw-button {
+  background-color: #086a87;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.kw-button:hover {
+  background-color: #6573BF;
+}
+
+#box1 {
+  margin-top: 40px;
+  width: 220px;
+  font-size: 20px;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-box {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.box-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  border-top: 5px solid #086a87;
+  width: 30%;
+
+
+}
+
+
+/* The Close Button */
+
+.close-box {
+  color: #aaa;
+  background-color: #086a87;
+  font-size: 28px;
+  width: 17%;
+  font-weight: bold;
+  margin: 1% auto;
+}
+
+.close-box:hover,
+.close-box:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#div1{
+ display: float:
+   justify-content: space-between;
+}
+.action-box {
+  color: #aaa;
+  background-color: #086a87;
+  font-size: 28px;
+  width: 10%;
+  padding: 5px;
+  font-weight: bold;
+  display: inline;
+}
+.action-box:hover,
+.action-box:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
 
 #wrapper, #loginform {
     margin: 0 auto;

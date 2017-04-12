@@ -4,7 +4,7 @@ include "part/header.php";
 
  ?>
  <section>
-   <h1>Vous etes sur la page de connexion</h1>
+   <h1>Connexion</h1>
    <form method = "post" action = "php/connexionCheck.php">
      <input type = "text" name = "email" placeholder = "Votre email" value = "" required = "required" ><br>
      <input type = "text" name = "pwd" placeholder = "Votre Password" value = "" require = "required" ><br>

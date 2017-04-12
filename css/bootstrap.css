@@ -139,6 +139,10 @@ pre {
     overflow: auto;
 }
 
+input, 
+
+
+
 code, kbd, pre, samp {
     font-family: monospace, monospace;
     font-size: 1em;
@@ -1394,7 +1398,7 @@ text-decoration: none;
 a {
     color: #337ab7;
     text-decoration: none;
-    
+
 }
 
 a:hover, a:focus {

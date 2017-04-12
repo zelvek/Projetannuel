@@ -24,7 +24,7 @@ $data_form = $_SESSION["data_form"];
 
 
 ?>
-
+   <h1>Inscription</h1>
 <form method="post" action="php/saveUser.php">
 
 
