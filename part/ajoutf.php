@@ -9,29 +9,19 @@
 
 
     <link href="../css/bootstrap.css" rel="stylesheet">
-
     <link href="../css/one-page-wonder.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="../image/icon.png" />
+    <link href="../css/style.css" rel="stylesheet">
 
 
   </head>
+
  <body id="fond">
 
 
     <?php include("menu.php"); ?>
 
-    <?php
-    require "../php/conf.inc.php" ;
-
-
-
-    ?>
-
-
-
-
-
+    <?php require "../php/conf.inc.php" ; ?>
 
 
 
@@ -66,7 +56,6 @@
 
 <input type="text" name="picture" placeholder="lien de la photo" value="" required="required"><br>
 <input type="text" name="title" value="" placeholder="titre du film" required="required"><br>
-
 
 <tr>
 <td>
@@ -112,7 +101,8 @@ catégorie : <select name="categorie"><br>
 
   }
 ?>
-</select><br>
+</select>
+<br>
 
 
 
@@ -140,22 +130,7 @@ genre : <select name="genre"><br>
 </table>
 </form>
 
-.         <table border="1px">
-23.             <tr>
-24.                 <th colspan="2"> Année - Entreprise</th>
-25.                 <th>Missions</th>
-26.             </tr>
-27.             <tr>
-28.                 <td>2015</td>
-29.                 <td>Sixt</td>
-30.                 <td>SMM</td>
-31.             </tr>
-32.             <tr>
-33.                 <td>2015</td>
-34.                 <td>Sixt</td>
-35.                 <td>SMM</td>
-36.             </tr>
-37.         </table>
+
 
 </body>
 </html>

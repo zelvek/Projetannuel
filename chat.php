@@ -29,7 +29,7 @@
 
     <div class="container">
 
-  <?php include("part/utilisateur.php") ?>
+  <?php include("part/chatbox.php") ?>
 
         <hr class="featurette-divider">
 
