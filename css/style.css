@@ -392,3 +392,20 @@ color: black !important;
 canvas {
   display: block;
 }
+input, button, select, textarea{
+    color: black !important;
+}
+#tableinscrit{
+    border-width:2px;
+}
+#test{
+
+    margin-top:30px; 
+    margin-left:0px; 
+    background-color:#7cffcc; 
+    width:650px; 
+    opacity : 0.8 ;
+    height:350px; 
+    border:solid black 5px;
+
+}

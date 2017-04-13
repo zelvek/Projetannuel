@@ -19,7 +19,7 @@ html {
 }
 
 .color {
-    color: white;
+    color: black;
 }
 
 .container {
@@ -46,7 +46,7 @@ html {
 }
 
 .copyright {
-    color: whiteblack;
+    color: black;
 }
 
 body article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -1380,7 +1380,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333;
+    color: black;
     background-color: #596668;
 
 }
@@ -1390,7 +1390,7 @@ input, button, select, textarea {
     font-size: inherit;
     line-height: inherit;
     margin-left: 200px;
-color: white;
+color: black !important;
 text-decoration: none;
 
 }
@@ -7016,6 +7016,6 @@ button.close {
 
 /*# sourceMappingURL=bootstrap.css.map */
 #lectus{
-color: white;
+color: black;
 text-decoration: none;
 }

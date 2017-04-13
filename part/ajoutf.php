@@ -18,6 +18,7 @@
   </head>
  <body id="fond">
 
+
     <?php include("menu.php"); ?>
 
     <?php
@@ -38,7 +39,7 @@
 
 
   <?php
-  echo "<div>";
+
   if(!empty($_SESSION["errors_form"])){
 
   echo "<ul>";
@@ -55,13 +56,14 @@
   ?>
 </section>
 
-<center>
-<div>
+
 <h1>AJOUT</h1>
 
-<table width="95%" border="0">
 
-<form class="" action="../php/savefilm.php" method="post"><br>
+
+<form class="" action="../php/savefilm.php" method="post"/><br>
+<table border="1px" id="tableinscrit" width="95%" border="0"><br>
+
 <input type="text" name="picture" placeholder="lien de la photo" value="" required="required"><br>
 <input type="text" name="title" value="" placeholder="titre du film" required="required"><br>
 
@@ -80,17 +82,16 @@
 
 
 <tr>
-</td>
+<td>
 
 <input type="text" name="description" value="" placeholder="description" required="required"><br>
 </td>
 
 <td>
 <input type="date" name="sortie" value="" required="required"><br>
-
 </td>
 </tr>
-</div>
+
 
 
 
@@ -132,32 +133,29 @@ genre : <select name="genre"><br>
 
 ?>
 </select><br>
-</tr>
+<tr>
 <input type="submit" value="AJOUTER"><br>
 </tr>
 
-
-</form>
-</div>
-</center>
-
-
-
-
-
-
-<table border="0" width="85%" align="center" >
-
-<tbody>
-  <tr
-</tbody>
-
 </table>
-
-
 </form>
-</center>
 
+.         <table border="1px">
+23.             <tr>
+24.                 <th colspan="2"> Année - Entreprise</th>
+25.                 <th>Missions</th>
+26.             </tr>
+27.             <tr>
+28.                 <td>2015</td>
+29.                 <td>Sixt</td>
+30.                 <td>SMM</td>
+31.             </tr>
+32.             <tr>
+33.                 <td>2015</td>
+34.                 <td>Sixt</td>
+35.                 <td>SMM</td>
+36.             </tr>
+37.         </table>
 
-  </body>
+</body>
 </html>
