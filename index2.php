@@ -16,7 +16,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="css/one-page-wonder.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    
+    <link href="css/stylehhh.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="icon.png" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

@@ -11,34 +11,6 @@ html, body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-    position: fixed;
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-top: 25%;
-}
-
-
 input{
 
 color: black !important;
@@ -409,6 +381,10 @@ input, button, select, textarea{
     border:solid black 5px;
 
 }
+
+
+
+
 /*
 #fond{
     margin-left: auto;
