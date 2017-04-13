@@ -16,6 +16,7 @@
 
 <body>
 
+
   <!-- les cookies -->
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
@@ -178,7 +179,6 @@
            <div class="close-box" onclick="myClose2()">Close</div>
          </div>
      </div>
-
 
   </boby>
 </html>

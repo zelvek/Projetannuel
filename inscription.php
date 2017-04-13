@@ -89,7 +89,7 @@ j'accepte les CGUs  <input type="checkbox" name="legacy" required="required"><br
 
 </div>
 <input type="submit" value="S'inscrire"><br>
-<input type = "button" Value="Connexion"><br>
+
 
 
 </form>
@@ -102,6 +102,6 @@ j'accepte les CGUs  <input type="checkbox" name="legacy" required="required"><br
 
  <?php
 
-include "part/footer.php";
+
 
   ?>

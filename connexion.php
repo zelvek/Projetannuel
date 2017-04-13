@@ -14,5 +14,3 @@ include "part/header.php";
  <?php
 
   ?>
-
-<?php include "part/footer.php";  ?>
