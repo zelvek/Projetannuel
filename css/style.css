@@ -392,6 +392,7 @@ color: black !important;
 canvas {
   display: block;
 }
+<<<<<<< HEAD
 input, button, select, textarea{
     color: black !important;
 }
@@ -415,3 +416,5 @@ input, button, select, textarea{
    margin-right: auto;
    width: 50em; 
    }*/
+=======
+>>>>>>> parent of 5e3bbd1... probleme

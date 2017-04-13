@@ -18,8 +18,12 @@
 
  <body id="fond">
 
+<<<<<<< HEAD
 
     <?php include("../part/menu.php"); ?>
+=======
+    <?php include("menu.php"); ?>
+>>>>>>> origin/master
 
     <?php require "../php/conf.inc.php" ; ?>
 
@@ -29,7 +33,7 @@
 
 
   <?php
-
+  echo "<div>";
   if(!empty($_SESSION["errors_form"])){
 
   
@@ -47,14 +51,13 @@
   ?>
 </section>
 
-
+<center>
+<div>
 <h1>AJOUT</h1>
 
+<table width="95%" border="0">
 
-
-<form class="" action="../php/savefilm.php" method="post"/><br>
-<table border="1px" id="tableinscrit" width="95%" border="0"><br>
-
+<form class="" action="../php/savefilm.php" method="post"><br>
 <input type="text" name="picture" placeholder="lien de la photo" value="" required="required"><br>
 <input type="text" name="title" value="" placeholder="titre du film" required="required"><br>
 
@@ -72,16 +75,17 @@
 
 
 <tr>
-<td>
+</td>
 
 <input type="text" name="description" value="" placeholder="description" required="required"><br>
 </td>
 
 <td>
 <input type="date" name="sortie" value="" required="required"><br>
+
 </td>
 </tr>
-
+</div>
 
 
 
@@ -124,16 +128,44 @@ genre : <select name="genre"><br>
 
 ?>
 </select><br>
-<tr>
+</tr>
 <input type="submit" value="AJOUTER"><br>
 </tr>
 
-</table>
-</form>
 
+</form>
+</div>
+</center>
+
+
+
+
+
+
+<table border="0" width="85%" align="center" >
+
+<tbody>
+  <tr
+</tbody>
+
+</table>
+
+
+</form>
+</center>
+
+
+<<<<<<< HEAD
 <br>
 <br>
 <br>
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/master
 
 </body>
+=======
+  </body>
+>>>>>>> parent of 5e3bbd1... probleme
 </html>
