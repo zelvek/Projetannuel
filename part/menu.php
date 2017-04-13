@@ -24,7 +24,7 @@
                           <a href="#serie">Film</a>
                       </li>
                       <li>
-                          <a href="#film">Serie</a>
+                          <a href="event.php">Serie</a>
                       </li>
                       <li>
                           <a href="#jeux">Animé</a>
