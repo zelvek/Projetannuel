@@ -179,7 +179,6 @@
            <div class="close-box" onclick="myClose2()">Close</div>
          </div>
      </div>
-
   </boby>
 </html>
 
@@ -200,6 +199,5 @@
 
 
 <?php
-//$checkPwd = $db->prepare('SELECT id FROM users WHERE pwd=:pwd');
-
+require "part/footer.php";
 ?>

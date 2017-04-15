@@ -139,11 +139,7 @@ pre {
     overflow: auto;
 }
 
-input, 
-
-
-
-code, kbd, pre, samp {
+input, code, kbd, pre, samp {
     font-family: monospace, monospace;
     font-size: 1em;
 }
@@ -1382,7 +1378,6 @@ body {
     line-height: 1.42857143;
     color: #333;
     background-color: #596668;
-
 }
 
 input, button, select, textarea {
@@ -1390,15 +1385,13 @@ input, button, select, textarea {
     font-size: inherit;
     line-height: inherit;
     margin-left: 200px;
-color: white;
-text-decoration: none;
-
+    color: white;
+    text-decoration: none;
 }
 
 a {
     color: #337ab7;
     text-decoration: none;
-
 }
 
 a:hover, a:focus {
@@ -7015,7 +7008,8 @@ button.close {
 
 
 /*# sourceMappingURL=bootstrap.css.map */
-#lectus{
-color: white;
-text-decoration: none;
+
+#lectus {
+    color: white;
+    text-decoration: none;
 }
