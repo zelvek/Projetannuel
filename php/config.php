@@ -45,5 +45,7 @@ $listOfErrors = [
                     12 => "Vous devez avoir entre 10 et 100 ans",
                     13 => "La date n'est pas valide",
                     14 => "L'adresse mail existe déjà",
+                    15 => "job doit faire entre 5 et 50 caractères",
+                    16 => "biographie doit être inférieur à 1500 caractères"
 
 ];

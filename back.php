@@ -65,7 +65,7 @@
     <div class="row">
     <div class="col-xs-12 col-lg-12 ">
     <div class="col-lg-3"></div>
-    <a href="#" class="myButton btn btn-send col-lg-6">Ajout Staff to Add Before film</a> <br>
+    <a href="php/ajoutstaff.php" class="myButton btn btn-send col-lg-6">Ajout Staff to Add Before film</a> <br>
     <div class="col-lg-3"></div>
     </div>
     </div>
