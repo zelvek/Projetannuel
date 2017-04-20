@@ -18,10 +18,7 @@ $charauthorized = str_shuffle($charauthorized);
 $lenght = rand(4,6);
 $charauthorized = substr($charauthorized,0,$lenght);
 
-
-//echo $charauthorized;
-
-
+//echo $charauthorized;x
 $a = rand(1,10);
 while ($a <= rand(2,20)) {
   ImageLine ($image, rand(50,150), rand(10,50), rand(50,150), rand(10,50), $color);

@@ -1,35 +1,8 @@
 html, body {
-
     margin: 0;
     padding: 0;
     height: 100%;
-
 }
-/* animated */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 body {
     position: fixed;
@@ -38,21 +11,16 @@ body {
     margin-top: 25%;
 }
 
-
-input{
-
-color: black !important;
-
-}
-option{
-color: black !important;
-
+input {
+    color: black !important;
 }
 
-select{
-color: black !important;
+option {
+    color: black !important;
+}
 
-
+select {
+    color: black !important;
 }
 
 .left {
@@ -129,7 +97,6 @@ color: black !important;
     font-size: 50px;
 }
 
-
 .image {
     width: 22%;
     float: left;
@@ -144,124 +111,108 @@ color: black !important;
     margin-left: -57%;
 }
 
-
-
-
-
-
-
-
 #kw-result {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
 }
 
 .kw-button {
-  background-color: #086a87;
-  -moz-border-radius: 28px;
-  -webkit-border-radius: 28px;
-  border-radius: 28px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+    background-color: #086a87;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .kw-button:hover {
-  background-color: #6573BF;
+    background-color: #6573BF;
 }
 
 #box1 {
-  margin-top: 40px;
-  width: 220px;
-  font-size: 20px;
-  border: 2px solid black;
-  margin-left: auto;
-  margin-right: auto;
+    margin-top: 40px;
+    width: 220px;
+    font-size: 20px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .my-box {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Black w/ opacity */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/ opacity */
 }
 
 
 /* Modal Content/Box */
 
 .box-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 10px;
-  border-top: 5px solid #086a87;
-  width: 30%;
-
-
+    background-color: #fefefe;
+    margin: 5% auto;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    border-top: 5px solid #086a87;
+    width: 30%;
 }
 
 
 /* The Close Button */
 
 .close-box {
-  color: #aaa;
-  background-color: #086a87;
-  font-size: 28px;
-  width: 17%;
-  font-weight: bold;
-  margin: 1% auto;
+    color: #aaa;
+    background-color: #086a87;
+    font-size: 28px;
+    width: 17%;
+    font-weight: bold;
+    margin: 1% auto;
 }
 
-.close-box:hover,
-.close-box:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.close-box:hover, .close-box:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
-#div1{
- display: float:
-   justify-content: space-between;
+
+#div1 {
+    display: float: justify-content: space-between;
 }
+
 .action-box {
-  color: #aaa;
-  background-color: #086a87;
-  font-size: 28px;
-  width: 10%;
-  padding: 5px;
-  font-weight: bold;
-  display: inline;
-}
-.action-box:hover,
-.action-box:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: #aaa;
+    background-color: #086a87;
+    font-size: 28px;
+    width: 10%;
+    padding: 5px;
+    font-weight: bold;
+    display: inline;
 }
 
-
-
-
-
-
-
+.action-box:hover, .action-box:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #wrapper, #loginform {
     margin: 0 auto;
@@ -390,31 +341,33 @@ color: black !important;
 }
 
 canvas {
-  display: block;
+    display: block;
 }
-<<<<<<< HEAD
-input, button, select, textarea{
+
+<<<<<<< HEAD input, button, select, textarea {
     color: black !important;
 }
-#tableinscrit{
-    border-width:2px;
-}
-#test{
 
-    margin-top:30px; 
-    margin-left:0px; 
-    background-color:#7cffcc; 
-    width:650px; 
-    opacity : 0.8 ;
-    height:350px; 
-    border:solid black 5px;
-
+#tableinscrit {
+    border-width: 2px;
 }
+
+#test {
+    margin-top: 30px;
+    margin-left: 0px;
+    background-color: #7cffcc;
+    width: 650px;
+    opacity: 0.8;
+    height: 350px;
+    border: solid black 5px;
+}
+
+
 /*
 #fond{
     margin-left: auto;
    margin-right: auto;
-   width: 50em; 
+   width: 50em;
    }*/
-=======
->>>>>>> parent of 5e3bbd1... probleme
+
+=======>>>>>>>parent of 5e3bbd1... probleme
