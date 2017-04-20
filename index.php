@@ -144,7 +144,7 @@
 <button class="id_div kw-button myButton col-lg-2 col-md-2 col-lg-push-2 left" onclick="myAlert()">Inscription</button>
 
 
-<button class="myButton col-lg-2 col-md-2 col-lg-pull-2 test2" onclick="myAlert2()">Connexion</button>
+<button class="myButton col-lg-2 col-md-2 & test2" onclick="myAlert2()">connexion</button>
 
 
 

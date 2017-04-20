@@ -391,3 +391,14 @@ input, button, select, textarea{
    margin-right: auto;
    width: 50em; 
    }*/
+   .header-image {
+    display: block;
+    width: 110%;
+    margin-left: -55px;
+    text-align: center;
+    background: url(../image/logo.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

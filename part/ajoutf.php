@@ -18,21 +18,16 @@
 
  <body id="fond">
 
-<<<<<<< HEAD
 
-    <?php include("../part/menu.php"); ?>
-=======
     <?php include("menu.php"); ?>
->>>>>>> origin/master
 
     <?php require "../php/conf.inc.php" ; ?>
-
-
 
 <section>
 
 
   <?php
+  
   echo "<div>";
   if(!empty($_SESSION["errors_form"])){
 
@@ -51,121 +46,64 @@
   ?>
 </section>
 
+
+
+
+
 <center>
-<div>
 <h1>AJOUT</h1>
-
-<table width="95%" border="0">
-
-<form class="" action="../php/savefilm.php" method="post"><br>
-<input type="text" name="picture" placeholder="lien de la photo" value="" required="required"><br>
-<input type="text" name="title" value="" placeholder="titre du film" required="required"><br>
-
-<tr>
-<td>
-
-<input type="text" name="realisateur" value="" placeholder="nom du réalisateur principal" required="required"><br>
-</td>
-
-<td>
-<input type="text" name="acteur" value="" placeholder="nom de l'acteur principal" required="required"><br>
-
-</td>
-</tr>
-
-
-<tr>
-</td>
-
-<input type="text" name="description" value="" placeholder="description" required="required"><br>
-</td>
-
-<td>
-<input type="date" name="sortie" value="" required="required"><br>
-
-</td>
-</tr>
-</div>
-
-
-
-
-catégorie : <select name="categorie"><br>
-
-
-  <?php
-  $categorydefault = (isset($data_form["categorie"]))?$data_form["categorie"]:"fi";
-
-
-  foreach ($listOfCategory as $key => $category) {
-  echo '<option value="'.$key.'"';
-  echo ($categorydefault == $key)?'selected = "selected"':'';
-  echo '>'.$category."</option>";
-
-
-
-  }
-?>
-</select>
-<br>
-
-
-
-
-genre : <select name="genre"><br>
-  <?php
-  $genredefault = (isset($data_form["genre"]))?$data_form["genre"]:"sf";
-
-
-  foreach ($listOfGenre as $key => $genre) {
-  echo '<option value="'.$key.'"';
-  echo ($genredefault == $key)?'selected = "selected"':'';
-  echo '>'.$genre."</option>";
-
-
-
-  }
-
-?>
-</select><br>
-</tr>
-<input type="submit" value="AJOUTER"><br>
-</tr>
-
-
-</form>
-</div>
 </center>
 
+<center>
+<table width="75%" border="4">
+<form class="" action="../php/savefilm.php" method="post" ><br>
+   <tr>
+       <td><input type="text" name="picture" placeholder="lien de la photo" value="" required="required"><br></td>
+       <td><input type="text" name="title" value="" placeholder="titre du film" required="required"></td>
+       <td><input type="text" name="realisateur" value="" placeholder="nom du réalisateur principal" required="required"></td>
+   </tr>
+   <tr>
+       <td><input type="text" name="acteur" value="" placeholder="nom de l'acteur principal" required="required"></td>
+       <td><input type="text" name="description" value="" placeholder="description" required="required"></td>
+       <td><input type="date" name="sortie" value="" required="required"></td>
+   </tr>
 
+   <tr>
 
+        <td>
+              catégorie : <select name="categorie"><br>
+              <?php
+              $categorydefault = (isset($data_form["categorie"]))?$data_form["categorie"]:"fi";
+              foreach ($listOfCategory as $key => $category) {
+              echo '<option value="'.$key.'"';
+              echo ($categorydefault == $key)?'selected = "selected"':'';
+              echo '>'.$category."</option>";
+              }?>
+              </select>
+        </td>
 
+        <td>
 
+              genre : <select name="genre"><br>
+              <?php
+              $genredefault = (isset($data_form["genre"]))?$data_form["genre"]:"sf";
+              foreach ($listOfGenre as $key => $genre) {
+              echo '<option value="'.$key.'"';
+              echo ($genredefault == $key)?'selected = "selected"':'';
+              echo '>'.$genre."</option>";
+              }?>
+            </select>
 
-<table border="0" width="85%" align="center" >
+        </td>
 
-<tbody>
-  <tr
-</tbody>
-
+        <td><input type="submit" value="AJOUTER"></td>
+   </tr>
+</form>
+</center>
 </table>
 
-
-</form>
-</center>
-
-
-<<<<<<< HEAD
 <br>
 <br>
 <br>
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/master
-
 </body>
-=======
-  </body>
->>>>>>> parent of 5e3bbd1... probleme
 </html>

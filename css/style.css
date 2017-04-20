@@ -362,6 +362,7 @@ canvas {
     border: solid black 5px;
 }
 
+<<<<<<< HEAD
 
 /*
 #fond{
@@ -371,3 +372,10 @@ canvas {
    }*/
 
 =======>>>>>>>parent of 5e3bbd1... probleme
+=======
+#fond{
+    margin-left: auto;
+   margin-right: auto;
+   width: 50px; 
+   }
+>>>>>>> origin/master
