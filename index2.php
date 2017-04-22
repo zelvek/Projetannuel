@@ -35,7 +35,7 @@
   <?php
 
 include("part/menu.php");
-require "php/verif_coo.php";
+
 
 
 ?>

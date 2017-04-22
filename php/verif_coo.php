@@ -1,10 +1,9 @@
 <?php
 
-if ($_SESSION['utilisateur'] == NULL) {
+if (isset($_SESSION['utilisateur'])) {
   header('Location ../index.php');
 }else {
 
-  
 
 
   try{

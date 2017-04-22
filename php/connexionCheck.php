@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -17,21 +18,16 @@ try{
     if( password_verify($_POST["pwd"], $query->fetch()["pwd"])){
 
 
-$test = AUTH_US;
+require "function.php";
 
-
-$query = $db->prepare("UPDATE users SET Is_connected = :Is_connected WHERE email = :email");
-  $query->execute(["Is_connected"=>$test,"email"=>$_POST["email"]]);
-
-
+$_SESSION["email"] = $_POST["email"];
+$_SESSION["token"] = generateAccesToken($_SESSION["email"]);
 
 
 
-$_SESSION['utilisateur'] = $_POST["email"];
-$_SESSION['token'] =$test;
 
 
-if ($_SESSION['token'] == $test) {
+
   header('Location: ../index2.php');
 }
 
