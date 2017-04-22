@@ -4,7 +4,18 @@
 
 
 
-print_r($_SESSION);
+//print_r($_SESSION);
+require "config.php";
+
+
+
+if(isset($_SESSION["email"]) == false && isset($_SESSION["token"]) == false){
+  echo "DDDDDDDDDDDDDDDDD";
+
+header("Location: index.php");
+
+}
+
 
  	function connectDb(){
  		try {
@@ -18,14 +29,15 @@ print_r($_SESSION);
 
  	function isConnected(){
  		//verification de l'existance des sessions
- 		if(!empty($_SESSION["email"]) && !empty($_SESSION["token"])){
+ 		if(isset($_SESSION["email"]) == true && isset($_SESSION["token"])== true){
  		//chercher l'existance dans la bdD(token +  email)
  			$db= connectDb();
- 			$query = $db->prepare("SELECT 1 FROM users WHERE email=:email AND  Is_connected=:Is_connected ");
+ 			$query = $db->prepare("SELECT 1 FROM users WHERE Email=:Email AND  Is_connected=:Is_connected ");
  			$query-> execute([
- 						"email"=>$_SESSION["email"],
+ 						"Email"=>$_SESSION["email"],
  						"Is_connected"=>$_SESSION["token"]
  				]);
+//  echo ($query->errorInfo()[2]);
  			if($query-> rowCount()) {
 	 			//si oui
 	 			$_SESSION["token"]=generateAccesToken($_SESSION["email"]);
@@ -40,9 +52,14 @@ print_r($_SESSION);
 
 	 	}else{
  		//les avariable de sessions n'existe pas
+
  		return false;
  		}
+
+
  	}
+
+
 
 
  	function logOut($redirect = false){

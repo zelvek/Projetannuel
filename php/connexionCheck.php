@@ -2,7 +2,8 @@
 <?php
 
 session_start();
-require "config.php";
+
+require "functions.php";
 
 
 try{
@@ -18,7 +19,6 @@ try{
     if( password_verify($_POST["pwd"], $query->fetch()["pwd"])){
 
 
-require "functions.php";
 
 $_SESSION["email"] = $_POST["email"];
 $_SESSION["token"] = generateAccesToken($_SESSION["email"]);

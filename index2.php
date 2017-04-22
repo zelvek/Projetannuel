@@ -43,7 +43,7 @@ include("part/menu.php");
 <?php include ("part/recherche.php");
 
 
-echo $_SESSION['token'];
+
 
 
 
