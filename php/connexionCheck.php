@@ -2,7 +2,7 @@
 
 session_start();
 require "config.php";
-require "user_connect.php";
+
 
 try{
     $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME , DB_USER, DB_PWD); // /!\ connection à la base de données /!\
@@ -17,14 +17,29 @@ try{
     if( password_verify($_POST["pwd"], $query->fetch()["pwd"])){
 
 
+$test = AUTH_US;
 
 
-cookieset();
-header( 'Location: ../index2.php');
+$query = $db->prepare("UPDATE users SET Is_connected = :Is_connected WHERE email = :email");
+  $query->execute(["Is_connected"=>$test,"email"=>$_POST["email"]]);
+
+
+
+
+
+$_SESSION['utilisateur'] = $_POST["email"];
+$_SESSION['token'] =$test;
+
+
+if ($_SESSION['token'] == $test) {
+  header('Location: ../index2.php');
+}
+
+
 
 
   }
 
   else {
-    echo("");
+    echo("ERREUR");
   }

@@ -16,7 +16,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="css/one-page-wonder.css" rel="stylesheet">
-    
+
     <link href="css/stylehhh.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="icon.png" />
 
@@ -35,14 +35,25 @@
   <?php
 
 include("part/menu.php");
-require "php/user_connect.php";   
+require "php/verif_coo.php";
+
 
 ?>
 
-<?php include ("part/recherche.php"); ?>  
+<?php include ("part/recherche.php");
 
-    
-                    
+
+
+
+
+
+
+
+
+?>
+
+
+
 
 
 
@@ -56,7 +67,7 @@ require "php/user_connect.php";
           <?php include ("part/jeux.php"); ?>
 
 
-        
+
         <!-- Footer -->
 
             <?php include("part/footer.php"); ?>
