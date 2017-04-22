@@ -38,12 +38,23 @@
                         <a href="chat.php"> Chat</a>
                       </li>
                       <li>
-                        <a href="option.php"> <?php   echo $_SESSION['utilisateur'];  ?> </a>
+                        <a href="option.php"> <?php   echo $_SESSION['email'];  ?> </a>
                         <li>
 
                           <?php
                           include ("config.php");
-                          require "php/function.php";
+                          require "php/functions.php";
+
+
+
+
+                          if(isConnected() == false){
+
+
+                          header("Location :index.php");
+
+
+                          }
 
                           try{
                               $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME , DB_USER, DB_PWD); // /!\ connection à la base de données /!\
@@ -52,7 +63,7 @@
                           }
 
                           $query = $db->prepare('SELECT Is_admin FROM users WHERE email = :email;');
-                            $query->execute(["email" =>$_SESSION['utilisateur']] );
+                            $query->execute(["email" =>$_SESSION['email']] );
 
 
                             $w = $query->fetch()["Is_admin"];

@@ -18,7 +18,7 @@ try{
     if( password_verify($_POST["pwd"], $query->fetch()["pwd"])){
 
 
-require "function.php";
+require "functions.php";
 
 $_SESSION["email"] = $_POST["email"];
 $_SESSION["token"] = generateAccesToken($_SESSION["email"]);
@@ -34,7 +34,7 @@ $_SESSION["token"] = generateAccesToken($_SESSION["email"]);
 
 
 
-  }
+
 
   else {
     echo("ERREUR");

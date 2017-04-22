@@ -2,8 +2,9 @@
  <?php
 
 
-require "config.php";
 
+
+print_r($_SESSION);
 
  	function connectDb(){
  		try {
@@ -27,7 +28,7 @@ require "config.php";
  				]);
  			if($query-> rowCount()) {
 	 			//si oui
-	 			$_SESSION["token"]=generateAccesToken($_SESSION["utilisateur"]);
+	 			$_SESSION["token"]=generateAccesToken($_SESSION["email"]);
 	 			return true;
 
 
@@ -46,22 +47,29 @@ require "config.php";
 
  	function logOut($redirect = false){
  		// supprimer les variables de sessions
- 		$db=connectDb();
- 		$query=$db-> prepare("UPDATE users SET token=NULL WHERE email=:email ");
- 		$query-> execute(["email"=>$_SESSION["email"]]);
+$p = NULL;
+
+    try {
+			$db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD );
+		}catch(Exception $e){
+			die("Erreur SQL : ".$e->getMessage() );
+		}
+
+ 		$query=$db-> prepare("UPDATE users SET Is_connected=NULL WHERE Email=:Email");
+ 		$query-> execute(["Email"=>$_SESSION["email"]]);
  		// restaurer la bdd
  		unset($_SESSION["email"]);
  		unset($_SESSION["token"]);
+//echo ($query->errorInfo()[2]);
 
- 		if($redirect){
- 			//rediriger vers index.php
- 			header("Location: index.php");
- 		}
+ 		header("Location: ../index.php");
+
  	}
 
  	function generateAccesToken($email){
  			// modification de la bdd avec un nouvel acces token
- 		 $accesToken = md5(uniqid()."54r,;dSk Juhg.");
+
+     $accesToken = md5(uniqid()."54r,;dSk Juhg.");
 		 $db=connectDb();
 		 $query = $db->prepare("UPDATE users SET Is_connected=:Is_connected WHERE email=:email ;");
 		 $query -> execute([

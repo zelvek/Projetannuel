@@ -34,7 +34,7 @@
   <?php include("part/menu.php");
 
 
-echo $_SESSION['utilisateur'];
+echo $_SESSION['email'];
 echo $_SESSION['token'];
 
 
