@@ -32,6 +32,14 @@ select {
     left: -35% !important;
 }
 
+
+.mobile{
+
+margin-left: -95%;
+
+
+}
+
 #inscrip {
     display: inline-block;
     float: left;

@@ -72,16 +72,6 @@ session_start();
 
 
 
-  <div class="container">
-        <div class="row">
-          <div class="col-lg-24">
-            <div class="row">
-            <div class="col-lg-offset-4 col-lg-4 col-md-5 image"></div>
-            <img src="http://fr.web.img6.acsta.net/newsv7/16/01/19/16/59/382184.jpg" alt="" class="image2">
-            </div>
-          </div>
-        </div>
-  </div>
 
 </div>
 <center class="lectus">
@@ -119,28 +109,6 @@ session_start();
 </script>
 
 
-<div class="container">
-      <div class="row">
-        <div class="col-lg-24">
-          <div class="row">
-          <div class="col-lg-offset-4 col-lg-4 col-md-4 image"></div>
-          <img src="http://myscreens.fr/wp-content/uploads/2010/03/IM2_REG_120x160_BD.jpg" alt="" class="image">
-          </div>
-        </div>
-      </div>
-</div>
-
-
-
-<div class="container">
-      <div class="row">
-        <div class="col-lg-24">
-          <div class="row">
-          <div class="col-lg-offset-4 col-lg-4 col-md-5 image"></div>
-          <img src="http://fr.web.img6.acsta.net/newsv7/16/01/19/16/59/382184.jpg" alt="" class="image2">
-          </div>
-        </div>
-      </div>
 
 
   <div class="container popup id_div" id="id_div">
@@ -149,55 +117,13 @@ session_start();
            <div class="row test">
 
 
+<center><h1 class="mobile">LES mobiles ne sont pas encore implémenté</h1></center>
 
-<button class="id_div kw-button myButton col-lg-2 col-md-2 col-lg-push-2 left" onclick="myAlert()">Inscription</button>
-
-
-<button class="myButton col-lg-2 col-md-2 test2" onclick="myAlert2()">connexion</button>
 
 
 <?php
 
 
-
-
-function isMobile() {
-
-// Check the server headers to see if they're mobile friendly
-if(isset($_SERVER["HTTP_X_WAP_PROFILE"])) {
-    return true;
-}
-
-// If the http_accept header supports wap then it's a mobile too
-if(preg_match("/wap\.|\.wap/i",$_SERVER["HTTP_ACCEPT"])) {
-    return true;
-}
-
-
-if(isset($_SERVER["HTTP_USER_AGENT"])){
-    $user_agents = array("midp", "j2me", "avantg", "docomo", "novarra", "palmos", "palmsource", "240x320", "opwv", "chtml", "pda", "windows\ ce", "mmp\/", "blackberry", "mib\/", "symbian", "wireless", "nokia", "hand", "mobi", "phone", "cdm", "up\.b", "audio", "SIE\-", "SEC\-", "samsung", "HTC", "mot\-", "mitsu", "sagem", "sony", "alcatel", "lg", "erics", "vx", "NEC", "philips", "mmm", "xx", "panasonic", "sharp", "wap", "sch", "rover", "pocket", "benq", "java", "pt", "pg", "vox", "amoi", "bird", "compal", "kg", "voda", "sany", "kdd", "dbt", "sendo", "sgh", "gradi", "jb", "\d\d\di", "moto");
-    foreach($user_agents as $user_string){
-        if(preg_match("/".$user_string."/i",$_SERVER["HTTP_USER_AGENT"])) {
-            return true;
-        }
-    }
-}
-
-
-if(preg_match("/iphone/i",$_SERVER["HTTP_USER_AGENT"])) {
-    return false;
-}
-
-
-return false;
-}
-    if (isMobile()) {
-   header("location: mobile.php");
-
-
-   }
-
-   ismobile();
 
 
 
