@@ -44,6 +44,8 @@ require "php/functions.php";
                         <a href="option.php"> <?php   echo $_SESSION['email'];  ?> </a>
                         <li>
 
+
+
                           <?php
 
 
@@ -76,7 +78,13 @@ require "php/functions.php";
 
 
 
+
                            ?>
+
+
+
+
+
 
 
 
@@ -101,6 +109,22 @@ require "php/functions.php";
             <div class="container">
                 <h1><a href="index2.php" id="lectus">LECTUS</a></h1>
                 <!--<h1><a href="../index2.php" id="lectus">LECTUS</a></h1>-->
+                <style>
+                .tep{
+
+                height: 15px !important;
+                width: 15px !important;
+
+                }
+                </style>
+<center>
+                <li> <a href="php/disco.php">
+                <img class="tep" src="image/offline.png" alt="">
+                </a>
+</center>
+
+
+              </li>
             </div>
         </div>
     </header>

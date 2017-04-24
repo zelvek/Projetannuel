@@ -8,10 +8,7 @@
 
 
 
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/one-page-wonder.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="../image/icon.png" />
-    <link href="../css/stylehhh.css" rel="stylesheet">
+
 
 
   </head>
@@ -19,7 +16,7 @@
  <body id="fond">
 
 
-    <?php include("menu.php"); ?>
+  
 
     <?php require "../php/conf.inc.php" ; ?>
 
@@ -27,11 +24,11 @@
 
 
   <?php
-  
+
   echo "<div>";
   if(!empty($_SESSION["errors_form"])){
 
-  
+
   foreach ($_SESSION["errors_form"] as $key => $errors) {
   echo "<li>".$listOfErrors[$errors]."</li>";
 ;

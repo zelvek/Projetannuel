@@ -12,18 +12,10 @@ ceci est la page d'option d'utilisateur
   rajouter une option pour changer de pseudo et de mot de passe + email
 </div>
 
-<style>
 
-IMG{
 
-height: 50px !important;
-width: 50px !important;
 
-}
-</style>
-<a href="php/disco.php">
-<img class="tep" src="https://4.bp.blogspot.com/_BCV2PR-ofaU/TGqC-5PoVXI/AAAAAAAAAPw/ner4ehqXvyQ/s1600/dessous-plat-design-virages-noir-450.jpg" alt="">
-</a>
+
 
 
 
