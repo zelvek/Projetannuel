@@ -162,7 +162,7 @@ $query->execute([
 "Country"=>$_POST["country"] ]);
 //header( 'Location ../index2.php');
 print_r($query->errorInfo());
-
+header("Location: ../index.php");
   }
 
 }
