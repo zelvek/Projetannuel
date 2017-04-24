@@ -85,7 +85,7 @@
 
 
 
-    $query = $db->prepare("SELECT Name FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Name FROM users WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -111,7 +111,7 @@
     }
 
 
-    $query = $db->prepare("SELECT Surname FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Surname FROM users WHERE Email=?");
 
 
     $query->execute([$_POST["user_email"]]);
@@ -132,7 +132,7 @@
     }
 
 
-    $query = $db->prepare("SELECT Nickname FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Nickname FROM users WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -150,7 +150,7 @@
     }
 
     }
-    $query = $db->prepare("SELECT Pwd FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Pwd FROM users WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -173,13 +173,20 @@
 
     ?>
 
-    <form class="" action="Verif.php" method="post">
-      <input type="text" name="" value="" placeholder="mot de passe" >
-      <input type="text" name="" value="" placeholder="confirmez le mot de passe" >
+    <form class="" action="changemdp.php" method="post">
+      <input type="text" name="mdp" value="" placeholder="mot de passe" >
+      <input type="text" name="mdp2" value="" placeholder="confirmez le mot de passe" >
+      <input id="tt" type="text" name="email" value= <?php $_POST["user_email"] ?>>
     <input type="submit" name="" value="Changer le mot de passe">
     </form>
 
+<style>
+  #tt{
 
+display:none;
+
+  }
+</style>
 
 
 
@@ -194,7 +201,7 @@
     echo "L'email est :".$_POST["user_email"];
     echo "<br>";
 
-    $query = $db->prepare("SELECT Birthday FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Birthday FROM users WHERE Email=?");
 
     $query->execute([$_POST["user_email"]]);
 
@@ -213,7 +220,7 @@
 
     }
 
-    $query = $db->prepare("SELECT Country FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Country FROM users WHERE Email=?");
 
 
 
@@ -235,7 +242,7 @@
     }
 
 
-    $query = $db->prepare("SELECT Date_inserted FROM USERS WHERE Email=?");
+    $query = $db->prepare("SELECT Date_inserted FROM users WHERE Email=?");
     $query->execute([$_POST["user_email"]]);
 
 
