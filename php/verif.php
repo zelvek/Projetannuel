@@ -19,7 +19,7 @@
 
 
         <?php
-
+session_start();
         require "../php/config.php";
 
         echo "<div>";
@@ -68,10 +68,13 @@
     if (count($_POST) ==1
     && !empty($_POST["user_email"])){
 
-
+$_SESSION["user_email"] = $_POST["user_email"];
       if(!filter_var($_POST["user_email"], FILTER_VALIDATE_EMAIL)){
         $error = true;
         $listOfErrors[] = 6;
+
+
+
       }
 
 
@@ -176,8 +179,7 @@
     <form class="" action="changemdp.php" method="post">
       <input type="text" name="mdp" value="" placeholder="mot de passe" >
       <input type="text" name="mdp2" value="" placeholder="confirmez le mot de passe" >
-      <input id="tt" type="text" name="email" value= <?php $_POST["user_email"] ?>>
-    <input type="submit" name="" value="Changer le mot de passe">
+      <input type="submit" name="" value="Changer le mot de passe">
     </form>
 
 <style>

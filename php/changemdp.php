@@ -2,28 +2,35 @@
 
 require "../php/config.php";
 
+session_start();
 
-
-if (count($_GET) ==2
-&& !empty($_GET["mdp"])
-&& !empty($_GET["mdp1"])
+if (count($_POST) ==2
+&& !empty($_POST["mdp"])
+&& !empty($_POST["mdp2"])
 ){
 $error = false;
 
-  if (strlen($_GET["pwd"])<8 || strlen($_GET["pwd"])> 500) {
+  if (strlen($_POST["mdp"])<8 || strlen($_POST["mdp"])> 500) {
+    echo "erreur1";
+  $error = true;
+
+  }
+  if (strlen($_POST["mdp2"])<8 || strlen($_POST["mdp2"])> 500) {
+    echo "erreur2";
   $error = true;
 
   }
 
 
-  if ($_GET["pwd"] != $_GET["pwd2"]) {
+  if ($_POST["mdp"] != $_POST["mdp2"]) {
+    echo "erreur3";
     $error = true;
 
   }
 
 
 
-if($error = true){
+if($error == true){
 
 echo("erreur");
 
@@ -40,14 +47,14 @@ echo("erreur");
   }
 
 
-$query=$db-> prepare("UPDATE users SET Password = :Password WHERE Email=:Email");
-$query-> execute(["Email"=>$_GET["email"],
-"Pwd" => password_hash($_GET["mdp"], PASSWORD_DEFAULT)]);
+$query=$db-> prepare("UPDATE users SET Pwd = :Pwd WHERE Email=:Email");
+$query-> execute(["Email"=>$_SESSION["user_email"],
+"Pwd" => password_hash($_POST["mdp"], PASSWORD_DEFAULT)]);
 
-
+echo ($query->errorInfo()[2]);
 header("Location: ../index2.php");
 
-
+unset($_SESSION["user_email"]);
 
 }
 
