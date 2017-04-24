@@ -402,3 +402,8 @@ input, button, select, textarea{
     background-size: cover;
     -o-background-size: cover;
 }
+
+.superherosfond{ 
+	background: url(../image/logo.jpg) no-repeat center center scroll; 
+	background-attachment:fixed; 
+}
