@@ -37,5 +37,5 @@ $_SESSION["token"] = generateAccesToken($_SESSION["email"]);
 
 
   else {
-    echo("ERREUR");
+      header('Location: ../index.php');
   }

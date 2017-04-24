@@ -12,7 +12,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="index.php">Lectus</a>
+                  <a class="navbar-brand" href="index2.php">Lectus</a>
 
 
 <?php session_start();
