@@ -132,7 +132,7 @@ if( strlen($_POST["birthday"]) == 10 ){
 
 
 
-  $query = $db->prepare('SELECT Id FROM USERS WHERE Email=:Email');
+  $query = $db->prepare('SELECT Id FROM users WHERE Email=:Email');
   $query->execute(["Email" => $_POST["email"]]);
   $resultat = $query->fetch();
 
@@ -148,7 +148,7 @@ header('Location: ../inscription.php');
 
 }else {
 
-$query = $db->prepare("INSERT INTO USERS (Gender,Name,Surname,Nickname,Pwd,Email,Birthday,Country) VALUES (:Gender ,:Name ,:Surname ,:Nickname ,:Pwd ,:Email ,:Birthday ,:Country )");
+$query = $db->prepare("INSERT INTO users (Gender,Name,Surname,Nickname,Pwd,Email,Birthday,Country) VALUES (:Gender ,:Name ,:Surname ,:Nickname ,:Pwd ,:Email ,:Birthday ,:Country )");
 $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 $query->execute([
