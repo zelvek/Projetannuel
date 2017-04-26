@@ -36,7 +36,7 @@
 
 echo $_SESSION['email'];
 echo $_SESSION['token'];
-
+//all work
 
    ?>
 
@@ -76,7 +76,7 @@ echo $_SESSION['token'];
     <div class="col-lg-3"></div>
     </div>
     </div>
-  
+
         </div>
         </div>
 
