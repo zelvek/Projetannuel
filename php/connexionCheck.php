@@ -13,9 +13,14 @@ try{
 }
 
 
+$query = $db->prepare('SELECT Is_delete FROM users WHERE email = :email;');
+  $query->execute(["email" =>$_POST["email"]] );
+
+if($query->fetch()["Is_delete"] != 1){
 
   $query = $db->prepare('SELECT pwd FROM users WHERE email = :email;');
     $query->execute(["email" =>$_POST["email"]] );
+
     if( password_verify($_POST["pwd"], $query->fetch()["pwd"])){
 
 
@@ -29,13 +34,9 @@ $_SESSION["token"] = generateAccesToken($_SESSION["email"]);
 
 
   header('Location: ../index2.php');
-}
-
-
-
-
-
-
-  else {
+}else {
+      header('Location: ../index.php');
+  }
+}else {
       header('Location: ../index.php');
   }

@@ -168,9 +168,7 @@ $_SESSION["user_email"] = $_POST["user_email"];
     if(!empty($result[0])){
 
     foreach ($result[0] as $value) {
-      echo "ATTENTION LE MDP EST CRYPTEE        ";
-      echo "le PWD est : ".$value;
-      echo "<br>";
+
     }
 
 
@@ -181,6 +179,13 @@ $_SESSION["user_email"] = $_POST["user_email"];
       <input type="text" name="mdp2" value="" placeholder="confirmez le mot de passe" >
       <input type="submit" name="" value="Changer le mot de passe">
     </form>
+
+
+
+    <form method="get" action="ban.php">
+        <button type="submit">BAN USER</button>
+    </form>
+
 
 <style>
   #tt{
@@ -266,6 +271,43 @@ display:none;
 
 
 
+    $query = $db->prepare("SELECT Message FROM tchat WHERE Pseudo=?");
+
+
+
+    $query->execute([$_POST["user_email"]]);
+
+
+    echo $query->errorInfo()[2];
+
+
+  $test = $query->fetchAll(PDO::FETCH_ASSOC);
+
+echo "<table width='75%' border='4'>";
+echo "<tr>";
+echo "<td> Message </td>";
+echo "<td> Auteur </td>";
+echo "</tr>";
+$i = 0;
+$l = count($test);
+    if(!empty($test)){
+      echo "<hr/>";
+      for ($k=0; $k <$l ; $k++) {
+      foreach($test[$k] as $value) {
+        echo "<tr>";
+        echo "<td>".$value."</td>";
+        echo "<td>".$_POST["user_email"]."</td>";
+        echo "</tr>";
+
+      $i++;
+    }
+
+    }
+
+echo "</table>";
+
+}
+echo "<hr/>";
 
 
 

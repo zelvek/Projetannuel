@@ -44,6 +44,22 @@ session_start();
         "href": "https://twitter.com/root_Updated"
       }
     })});
+
+
+
+
+
+
+
+
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3323508660354393",
+        enable_page_level_ads: true
+      });
     </script>
 
 
