@@ -52,3 +52,10 @@ $listOfErrors = [
                     16 => "biographie doit être inférieur à 1500 caractères"
 
 ];
+
+$listOfJob = [
+                "Act" =>"Actor",
+                "Real" =>"Director",
+                "Mus" => "SongCreator"
+
+];
