@@ -1,21 +1,15 @@
 <?php
 
+require "ajoutFilm.php";
 require "conf.inc.php";
-require "config.php";
 
-
-
-
-if(count($_POST)==8
-&& !empty($_POST["picture"])
-&& !empty($_POST["title"])
-&& !empty($_POST["realisateur"])   //
-&& !empty($_POST["acteur"])  //
-&& !empty($_POST["description"])
-&& !empty($_POST["categorie"])
-&& !empty($_POST["genre"])
-&& !empty($_POST["sortie"])){
-
+if(count($_POST)==6
+  && isset($_POST["picture"])
+  && isset($_POST["title"])
+  && isset($_POST["description"])
+  && isset($_POST["categorie"])
+  && isset($_POST["genre"])
+  && isset($_POST["sortie"])){
 
 
 $error = false;
@@ -23,7 +17,6 @@ $listOfErrors = [];
 
 
 $_POST["sortie"] = trim($_POST["sortie"]);
-
 $_POST["picture"] = trim($_POST["picture"]);
 
 
@@ -39,29 +32,11 @@ die("erreur SQL :".$e->getMessage());
 }
 
 
-
-
-
-//compter les charactère et verif
-
-
-if (strlen($_POST["realisateur"])<2 || strlen($_POST["realisateur"])> 100  ){
-  $error = true;
-$listOfErrors[] = 1;
-
-}
-if (strlen($_POST["acteur"])<2 || strlen($_POST["acteur"])> 100) {
-  $error = true;
-$listOfErrors[] = 2;
-}
-
 // vérif existence cat et genre
 
 
 if (!array_key_exists($_POST["genre"],$listOfGenre)) {
 $fatalerror = true;
-
-
 
 }
 if (!array_key_exists($_POST["categorie"],$listOfCategory)) {
@@ -124,49 +99,26 @@ if( strlen($_POST["sortie"]) == 10 ){
 if ($error) {
   $_SESSION["errors_form"] = $listOfErrors;
   $_SESSION["data_form"] = $_POST;
-  header('Location: ../part/ajoutf.php');
+  header('Location: ajoutFilm.php');
 }else {
 
 
-
-  $query = $db->prepare("INSERT INTO film (Picture,Title,Staff,acteur,description,sortie,categorie,genre) VALUES (:picture ,:title ,:realisateur ,:acteur ,:description ,:sortie ,:categorie ,:genre )");
+  echo ($year );
+  echo ($month);
+  echo ($day );
+  $query = $db->prepare("INSERT INTO movies (Picture, Title, Description, Date_out, Category, Type) VALUES (:Picture, :Title, :Description, :Date_out, :Categorie, :Type )");
   $query->execute([
-    "picture"=>$_POST["picture"],
-  "title"=>$_POST["title"],
-  "realisateur"=>$_POST["realisateur"],
-  "acteur"=>$_POST["acteur"],
-  "description"=>$_POST["description"],
-  "sortie"=>$_POST["sortie"],
-  "categorie"=>$_POST["categorie"],
-  "genre"=>$_POST["genre"]]);
+  "Picture"=>$_POST["picture"],
+  "Title"=>$_POST["title"],
+  "Description"=>$_POST["description"],
+  "Date_out"=>$year."-".$month."-".$day,
+  "Categorie"=>$_POST["categorie"],
+  "Type"=>$_POST["genre"]]);
+  print_r($query->errorInfo());
 
     }
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
