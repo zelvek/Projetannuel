@@ -77,43 +77,14 @@ echo $_SESSION['token'];
     </div>
     </div>
 
-<?php
-
-try{
-
-$db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD);
-
-}catch(Exception $e){
-die("erreur SQL :".$e->getMessage());
-
-}
-
-
-$p = NULL;
-      $query = $db->prepare("SELECT Is_connected FROM users WHERE Is_connected IS NOT NULL");
-      $query->execute();
-
-
-
-$test = $query->fetchAll(PDO::FETCH_ASSOC);
-echo ($query->errorInfo()[2]);
-
-
-$a = count($test);
 
 
 
 
 
-echo"<center>";
-
-echo "le nombre d'utilisateur connectés est de :".$a."  c'est super";
-
-echo"</center>";
 
 
 
-?>
 
 
 
