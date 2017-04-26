@@ -144,7 +144,7 @@ if( strlen($_POST["birthday"]) == 10 ){
 if($error) {
   $_SESSION["errors_form"] = $listOfErrors;
   $_SESSION["data_form"] = $_POST;
-header('Location: ../index.php');
+header('Location: ../inscription.php');
 
 }else {
 
