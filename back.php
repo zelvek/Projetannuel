@@ -34,8 +34,8 @@
   <?php include("part/menu.php");
 
 
-echo $_SESSION['email'];
-echo $_SESSION['token'];
+//echo $_SESSION['email'];
+//echo $_SESSION['token'];
 //all work
 
    ?>

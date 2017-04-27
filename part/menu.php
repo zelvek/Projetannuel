@@ -28,15 +28,7 @@ require "php/coo.php";
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                      <li>
-                          <a href="#serie">Film</a>
-                      </li>
-                      <li>
-                          <a href="event.php">Serie</a>
-                      </li>
-                      <li>
-                          <a href="#jeux">Animé</a>
-                      </li>
+                    
                       <li>
                         <a href="chat.php"> Chat</a>
                       </li>
