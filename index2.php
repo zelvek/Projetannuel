@@ -22,9 +22,13 @@
 
 
 
+
 </head>
 
 <body id="fond">
+
+  <div class="adleave81379455" adleave-slot="ADLEAVE-LxB-209450-1"></div>
+<script>(adleave81379455 = window.adleave81379455 || []).push({});</script>
 <center>
 
   <?php
@@ -56,7 +60,7 @@ include("part/menu.php");
 
         <?php include ("part/film.php"); ?>
 
-        
+
 
 
 

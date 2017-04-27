@@ -28,7 +28,7 @@ require "php/coo.php";
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    
+
                       <li>
                         <a href="chat.php"> Chat</a>
                       </li>
@@ -119,4 +119,13 @@ require "php/coo.php";
               </li>
             </div>
         </div>
+
+
+        <script type="text/javascript">
+	(function() {
+		var adlS = document.createElement('script'); adlS.type = 'text/javascript'; adlS.async = true;
+		adlS.src = '//www.adwidecenter.com/adlscript/showads.php?idpub=209450&tmp='+Math.floor(Math.random()*99999999999);
+		var sadlS = document.getElementsByTagName('script')[0]; sadlS.parentNode.insertBefore(adlS, sadlS);
+	})();
+</script>
     </header>
