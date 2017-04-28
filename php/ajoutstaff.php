@@ -38,13 +38,14 @@ $data_form = $_SESSION["data_form"];
 <input type = "text" name="biographie" value="<?php echo (isset($data_form["biographie"]))?$data_form["biographie"]:"";?>" required="required" placeholder="biographie"><br>
 <select name = "Job">
 <?php
-$jobDefault = (isset($data_form["job"]))?$data_form["job"]:"Act";
+$jobDefault = (isset($data_form["Job"]))?$data_form["Job"]:"Act";
 foreach ($listOfJob as $key => $job) {
   echo '<option value="'.$key.'"';
   echo ($jobDefault == $key)?'selected = "selected"':'';
   echo '>'.$job."</option>";
 }
 ?>
+</select>
 </div>
 <input type="submit" value="Ajout"><br>
 </form>
