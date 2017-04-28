@@ -11,17 +11,13 @@
 
     <title>LECTUS</title>
 
-
-   <link href="css/bootstrap.min.css" rel="stylesheet">
+ 	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="css/one-page-wonder.css" rel="stylesheet">
 
     <link href="css/stylehhh.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="icon.png" />
-
-
-
 
 </head>
 
@@ -36,24 +32,7 @@
 include("part/menu.php");
 
 
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Page Content -->
     <div class="container">
@@ -61,13 +40,7 @@ include("part/menu.php");
         <?php include ("part/film.php"); ?>
 
 
-
-
-
-
-
-            <?php include("part/footer.php"); ?>
-
+        <?php include("part/footer.php"); ?>
 
     </div>
 

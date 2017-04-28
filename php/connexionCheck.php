@@ -25,18 +25,19 @@ if($query->fetch()["Is_delete"] != 1){
 
 
 
-$_SESSION["email"] = $_POST["email"];
-$_SESSION["token"] = generateAccesToken($_SESSION["email"]);
+    $_SESSION["email"] = $_POST["email"];
+    $_SESSION["token"] = generateAccesToken($_SESSION["email"]);
 
 
 
 
 
 
-  header('Location: ../index2.php');
-}else {
-      header('Location: ../index.php');
+      header('Location: ../index2.php');
+    }else {
+          header('Location: ../index.php');
   }
+  
 }else {
       header('Location: ../index.php');
   }

@@ -65,25 +65,7 @@ require "php/coo.php";
                               echo "</li>";
                             }
 
-
-
-
-
-
-
                            ?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                   </ul>
