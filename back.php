@@ -63,7 +63,7 @@
     <div class="row">
     <div class="col-xs-12 col-lg-12 ">
     <div class="col-lg-3"></div>
-    <a href="part/ajoutf.php" class="myButton btn btn-send col-lg-6"target="_blank">Ajout Film</a> <br>
+    <a href="php/ajoutFilm.php" class="myButton btn btn-send col-lg-6"target="_blank">Ajout Film</a> <br>
     <div class="col-lg-3"></div>
     </div>
     </div>
