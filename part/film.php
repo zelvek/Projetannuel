@@ -32,7 +32,8 @@ $film = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-
+$saveid = 0;
+$savenumber = 0;
 
 
 
@@ -97,68 +98,87 @@ echo "<br>";
 //print_r($email);
 
 
-print_r($test);
+//print_r($test);
 
-if ($test == null ) {
+
+if ($savenumber < count($test) ) {
+$savenumber = count($test);
+$saveid = $value;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+}
+
+
+
+
+
+}
+
+$reponse = $db->prepare("SELECT film FROM live WHERE email = :email DESC LIMIT 0,10");
+$reponse ->execute(["email"=>$saveid]);
+
+$reponse = $reponse->fetchall(PDO::FETCH_ASSOC);
+
+//echo $saveid;
+//echo $savenumber;
+print_r($reponse);
+
+
+
+
+if(count($reponse)==0 ){
+
+
 
   $reponse = $db->query("SELECT Title, Picture, id FROM movies ORDER BY Date_out DESC LIMIT 0, 10");
 
 
   echo $query->errorInfo()[2];
 
-  while ($donnees = $reponse->fetch())
-  {
+while ($donnees = $reponse->fetch())
+{
 
-  echo "<div class='fra'>";
-
-
-
-  echo "<center>";
-  echo "<br>";
-  echo "<form action='php/film_nrm.php' method=\"POST\">";
-
-  echo htmlspecialchars($donnees['Title']);
-  echo "<br>";
-  echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
-
-  echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
-
-  echo "<br>";
-
-
-  echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
-
-  echo "<br>";
-  echo "</form>";
-
-  echo "</center>";
-
-  echo"<hr>";
-  }
+echo "<div class='fra'>";
 
 
 
+echo "<center>";
+echo "<br>";
+echo "<form action='php/film_nrm.php' method=\"POST\">";
 
-}else {
+echo htmlspecialchars($donnees['Title']);
+echo "<br>";
+echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
+
+echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
+
+echo "<br>";
 
 
+echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
 
+echo "<br>";
+echo "</form>";
+
+echo "</center>";
+
+echo"<hr>";
 }
 
-
-
-
-
 }
-  }
-
-}
-
-
-
-
-
-
 
 
 
