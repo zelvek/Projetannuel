@@ -33,3 +33,7 @@ $data_form = $_SESSION["data_form"];
   </label>
   <input type="submit" value="ajout du film"><br>
 </form>
+<?php
+
+
+ ?>

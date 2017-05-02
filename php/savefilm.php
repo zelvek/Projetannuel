@@ -102,18 +102,21 @@ if ($error) {
   header('Location: ajoutFilm.php');
 }else {
 
-
+$id = md5(time());
   echo ($year );
   echo ($month);
   echo ($day );
-  $query = $db->prepare("INSERT INTO movies (Picture, Title, Description, Date_out, Category, Type) VALUES (:Picture, :Title, :Description, :Date_out, :Categorie, :Type )");
+  $query = $db->prepare("INSERT INTO movies (Picture, Title, Description, Date_out, Category, Type, id) VALUES (:Picture, :Title, :Description, :Date_out, :Categorie, :Type, :id )");
   $query->execute([
   "Picture"=>$_POST["picture"],
   "Title"=>$_POST["title"],
   "Description"=>$_POST["description"],
   "Date_out"=>$year."-".$month."-".$day,
   "Categorie"=>$_POST["categorie"],
-  "Type"=>$_POST["genre"]]);
+  "Type"=>$_POST["genre"],
+  "id"=>$id]);
+
+  
   print_r($query->errorInfo());
 
     }

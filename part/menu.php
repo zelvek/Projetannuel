@@ -17,6 +17,9 @@
 
 <?php session_start();
 
+
+unset($_SESSION["film"]);
+
 require "php/functions.php";
 require "php/coo.php";
 

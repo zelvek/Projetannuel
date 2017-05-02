@@ -53,6 +53,115 @@ $film = $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
+//selection de tout les utilisateurs
+
+$email = $db -> prepare("SELECT film FROM love WHERE email = :email");
+$email->execute(["email"=>$_SESSION['email']]);
+
+$email = $email->fetchall(PDO::FETCH_ASSOC);
+
+
+//print_r($email);
+
+$user = $db -> query("SELECT Email FROM users");
+
+$user = $user->fetchall(PDO::FETCH_ASSOC);
+
+
+
+//print_r($user);
+
+
+for ($i=0; $i < count($user) ; $i++) {
+  foreach ($user[$i] as  $value) {
+
+
+    $valeur = $db -> prepare("SELECT film FROM love WHERE email = :email");
+    $valeur->execute(["email"=>$value]);
+
+    $valeur = $valeur->fetchall(PDO::FETCH_ASSOC);
+
+
+
+if ($valeur == NULL || $email == NULL){
+
+
+
+}else{
+//........................................................................................................................................................
+
+$test = array_diff($valeur["0"], $email["0"]);
+
+//print_r($valeur);
+echo "<br>";
+//print_r($email);
+
+
+print_r($test);
+
+if ($test == null ) {
+
+  $reponse = $db->query("SELECT Title, Picture, id FROM movies ORDER BY Date_out DESC LIMIT 0, 10");
+
+
+  echo $query->errorInfo()[2];
+
+  while ($donnees = $reponse->fetch())
+  {
+
+  echo "<div class='fra'>";
+
+
+
+  echo "<center>";
+  echo "<br>";
+  echo "<form action='php/film_nrm.php' method=\"POST\">";
+
+  echo htmlspecialchars($donnees['Title']);
+  echo "<br>";
+  echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
+
+  echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
+
+  echo "<br>";
+
+
+  echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+
+  echo "<br>";
+  echo "</form>";
+
+  echo "</center>";
+
+  echo"<hr>";
+  }
+
+
+
+
+}else {
+
+
+
+}
+
+
+
+
+
+}
+  }
+
+}
+
+
+
+
+
+
+
+
+
 
 }else {
 
@@ -67,18 +176,23 @@ while ($donnees = $reponse->fetch())
 echo "<div class='fra'>";
 
 
-echo "<img src='".htmlspecialchars($donnees['Picture'])."'class='img_film'>";
 
 echo "<center>";
+echo "<br>";
+echo "<form action='php/film_nrm.php' method=\"POST\">";
 
-echo "<form class='row' action='/php/film_nrm.php' method='post'>";
+echo htmlspecialchars($donnees['Title']);
+echo "<br>";
+echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
 
-echo "<input type='checkbox' name='valeur' value='".htmlspecialchars($donnees['id']).">";
-echo " <input class='col-md-2 col-md-offset-5' type='submit' name='button' value=".htmlspecialchars($donnees['Title']).">";
+echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
+
+echo "<br>";
 
 
-echo htmlspecialchars($donnees['id']);
+echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
 
+echo "<br>";
 echo "</form>";
 
 echo "</center>";
@@ -87,7 +201,7 @@ echo"<hr>";
 }
 
 
-
+//".htmlspecialchars($donnees['Title'])."
 }
 
 
@@ -96,11 +210,11 @@ echo"<hr>";
 
  ?>
 
- <style media="screen">
-   .img_film{
+ <style>
+   img{
      weight: 50px!important;
      height: 200px!important;
-     padding: 7px!important;
+
    }
 
    .fra{
@@ -114,10 +228,19 @@ background-color: rgba(225, 225, 225, .8);
      margin-left: -20px;
    }
 
+
+   .test{
+
+display: none;
+
+   }
+
    input{
 
-     background-color: blue;
+     margin-left: auto;
+     margin-right: auto;
    }
+
 
 
  </style>
