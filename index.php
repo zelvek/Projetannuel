@@ -63,7 +63,7 @@ session_start();
     </script>
 
 
-  
+
   <!-- End Piwik Code -->
 
 
@@ -75,16 +75,7 @@ session_start();
 
 
 
-  <div class="container">
-        <div class="row">
-          <div class="col-lg-24">
-            <div class="row">
-            <div class="col-lg-offset-4 col-lg-4 col-md-5 image"></div>
-            <img src="http://fr.web.img6.acsta.net/newsv7/16/01/19/16/59/382184.jpg" alt="" class="image2">
-            </div>
-          </div>
-        </div>
-  </div>
+
 
 </div>
 <center class="lectus">
