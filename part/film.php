@@ -46,13 +46,17 @@ $savenumber = 0;
       echo "<td> Auteur </td>";
       echo "</tr>";
       echo "<hr/>";
-      foreach($film[0] as $value) {
+for ($i=0; $i < count($film) ; $i++) {
+  # code...
+
+      foreach($film[$i] as $value) {
         echo "<tr>";
         echo "<td>".$value."</td>";
         echo "<td>".$_SESSION["email"]."</td>";
         echo "</tr>";
+        echo "1";
     }
-
+}
 
 //selection de tout les utilisateurs
 
@@ -71,18 +75,13 @@ $user = $user->fetchall(PDO::FETCH_ASSOC);
 
 
 //print_r($user);
-
-
 for ($i=0; $i < count($user) ; $i++) {
   foreach ($user[$i] as  $value) {
-
 
     $valeur = $db -> prepare("SELECT film FROM love WHERE email = :email");
     $valeur->execute(["email"=>$value]);
 
     $valeur = $valeur->fetchall(PDO::FETCH_ASSOC);
-
-
 
 if ($valeur == NULL || $email == NULL){
 
@@ -92,9 +91,9 @@ if ($valeur == NULL || $email == NULL){
 //........................................................................................................................................................
 
 $test = array_diff($valeur["0"], $email["0"]);
+//echo $value;
 
 //print_r($valeur);
-echo "<br>";
 //print_r($email);
 
 
@@ -102,8 +101,15 @@ echo "<br>";
 
 
 if ($savenumber < count($test) ) {
+
+
 $savenumber = count($test);
 $saveid = $value;
+
+
+//echo $value;
+
+
 }
 
 
@@ -127,14 +133,26 @@ $saveid = $value;
 
 }
 
-$reponse = $db->prepare("SELECT film FROM live WHERE email = :email DESC LIMIT 0,10");
+
+
+//print_r($test);
+
+
+//echo "<br>";
+//echo $saveid;
+
+
+
+
+
+ $reponse = $db->prepare("SELECT film FROM love WHERE email = :email");
 $reponse ->execute(["email"=>$saveid]);
 
 $reponse = $reponse->fetchall(PDO::FETCH_ASSOC);
 
 //echo $saveid;
 //echo $savenumber;
-print_r($reponse);
+//print_r($reponse["0"]);
 
 
 
@@ -176,6 +194,101 @@ echo "</form>";
 echo "</center>";
 
 echo"<hr>";
+}
+
+}else {
+
+
+
+  foreach ($reponse["0"] as $value) {
+
+
+    $cherche = $db->prepare("SELECT Title, Picture, id FROM movies where id = :id");
+    $cherche->execute(["id"=>$value]);
+$_SESSION["Value"] = $value;
+    echo $query->errorInfo()[2];
+
+//print_r($cherche);
+
+
+
+while ($donnees = $cherche->fetch())
+{
+
+
+
+
+echo "<div class='fra'>";
+
+
+
+echo "<center>";
+echo "<br>";
+echo "<form action='php/film_nrm.php' method=\"POST\">";
+
+echo htmlspecialchars($donnees['Title']);
+echo "<br>";
+echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
+
+echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
+
+echo "<br>";
+
+
+echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+
+echo "<br>";
+echo "</form>";
+
+echo "</center>";
+
+echo"<hr>";
+}
+
+
+//".htmlspecialchars($donnees['Title'])."
+}
+
+
+
+if (count($cherche)< 10 ) {
+
+
+  $reponse = $db->query("SELECT Title, Picture, id FROM movies ORDER BY Date_out DESC LIMIT 0, 9");
+
+
+  echo $query->errorInfo()[2];
+
+while ($donnees = $reponse->fetch())
+{
+
+echo "<div class='fra'>";
+
+
+
+echo "<center>";
+echo "<br>";
+echo "<form action='php/film_nrm.php' method=\"POST\">";
+
+echo htmlspecialchars($donnees['Title']);
+echo "<br>";
+echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
+
+echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
+
+echo "<br>";
+
+
+echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+
+echo "<br>";
+echo "</form>";
+
+echo "</center>";
+
+echo"<hr>";
+}
+
 }
 
 }
@@ -264,3 +377,7 @@ display: none;
 
 
  </style>
+
+
+
+<h2>Vous êtes liée actuellement avec <?php echo $saveid; ?></h2>

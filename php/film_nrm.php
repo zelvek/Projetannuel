@@ -52,8 +52,27 @@ echo htmlspecialchars($donnees['Description']);
 
 echo "<br>";
 
-echo "<button type=\"button\" name=\"button\" onclick=\"document.location.href = 'like.php'\">J'aime </button>";
-echo "</div>";
+
+$like = $db->prepare("SELECT film FROM love WHERE email = :email and film = :film ");
+$like->execute([
+"email"=>$_SESSION["email"],
+"film"=>$_SESSION["film"]]);
+$like = $like->fetchall(PDO::FETCH_ASSOC);
+
+//print_r($like);
+//echo Count($like);
+if (count($like) == 0) {
+  echo "<button type=\"button\" name=\"button\" onclick=\"document.location.href = 'like.php'\">J'aime </button>";
+  echo "</div>";
+
+}else {
+
+  echo "<button type=\"button\" name=\"button\" onclick=\"document.location.href = 'unlike.php'\">J'aime plus </button>";
+  echo "</div>";
+
+}
+
+
 
 
 
