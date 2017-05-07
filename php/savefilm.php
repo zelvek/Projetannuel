@@ -106,7 +106,7 @@ $id = md5(time());
   echo ($year );
   echo ($month);
   echo ($day );
-  $query = $db->prepare("INSERT INTO movies (Picture, Title, Description, Date_out, Category, Type, id) VALUES (:Picture, :Title, :Description, :Date_out, :Categorie, :Type, ;id )");
+  $query = $db->prepare("INSERT INTO movies (Picture, Title, Description, Date_out, Category, Type, id) VALUES (:Picture, :Title, :Description, :Date_out, :Categorie, :Type, :id )");
   $query->execute([
   "Picture"=>$_POST["picture"],
   "Title"=>$_POST["title"],
