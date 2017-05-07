@@ -117,7 +117,7 @@ $id = md5(time());
   "id"=>$id]);
 
 
-  print_r($query->errorInfo());
+//  print_r($query->errorInfo());
 
     }
 
