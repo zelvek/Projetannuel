@@ -21,7 +21,7 @@ $data_form = $_SESSION["data_form"];
 
 ?>
 <h1>Ajout Film</h1>
-<form method="post" action="saveFilm.php">
+<form method="post" action="savefilm.php">
   <label>
     <br>
     <input type="text" name="title"placeholder="Le titre" value=<?php echo (isset($data_form["title"]))?$data_form["title"]:"";?>> <br>
