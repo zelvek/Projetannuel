@@ -37,7 +37,7 @@
 //echo $_SESSION['email'];
 //echo $_SESSION['token'];
 //all work
-require 'php/popup.php';
+//require 'php/popup.php';
    ?>
 
 
@@ -45,10 +45,10 @@ require 'php/popup.php';
 
 
 
-  <!--  <div class="row">
+   <div class="row">
     <div class="col-xs-12 col-lg-12 ">
     <div class="col-lg-3"></div>
-    <a onclick="myAlert()" class="myButton btn btn-send col-lg-6"  target=_blank>Utilisateurs</a>
+    <a href="php/verif.php" class="myButton btn btn-send col-lg-6"  target=_blank>Utilisateurs</a>
     <div class="col-lg-3"></div>
     </div>
     </div>
@@ -75,7 +75,7 @@ require 'php/popup.php';
         </div>
         </div>
 
-      -->
+
 
     <?php
 

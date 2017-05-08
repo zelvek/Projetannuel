@@ -4,8 +4,8 @@
 
 
         <?php
-    //  session_start();
-  //  require "config.php";
+      session_start();
+  require "config.php";
 
 
         echo "<div>";
@@ -26,7 +26,7 @@
 
 
 
-    <form class="" action="back.php" method="post">
+    <form class="" action="verif.php" method="post">
 
     <input type="email" name="user_email" value=""><br>
     <input type="submit" value="submit">
@@ -298,27 +298,6 @@ echo "<hr/>";
 
 
 
-//echo $test;
-
-<<<<<<< HEAD
-=======
-$query = $db->prepare("SELECT ip FROM users WHERE Email=?");
-
-$query->execute([$_POST["user_email"]]);
-$test = $query->fetchAll(PDO::FETCH_ASSOC);
-
-
-print_r($test);
-
-
-
-
-
-
-foreach ($test["0"] as $value) {
->>>>>>> parent of 2851169... fghj
-
-
 
 
 
@@ -326,6 +305,29 @@ foreach ($test["0"] as $value) {
 
 
     }
+
+
+    $query = $db->prepare("SELECT ip FROM users WHERE Email=?");
+$query->execute([$_POST["user_email"]]);
+$test = $query->fetchAll(PDO::FETCH_ASSOC);
+//print_r($test);
+foreach ($test["0"] as $value) {
+  if (preg_match("*^([0-9]{1,3}.){3}.([0-9]{1,3})$*", $value))
+  {
+    require '../geoloc/geoipcity.inc';
+    $database = geoip_open('../geoloc/GeoLiteCity.dat',GEOIP_STANDARD);
+    $ip = $value;
+    $record = geoip_record_by_addr($database, $ip);
+    //print_r($record);
+    foreach ($record as $key => $value) {
+    echo $key." ====>".$value."<br>";
+    }
+  }
+  else
+  {
+  	echo 'l\'adresse ip n\'est pas valide' ;
+  }
+}
 
 
 
