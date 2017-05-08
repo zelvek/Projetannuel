@@ -1,21 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @zelvek
- Sign out
- Unwatch 1
-  Unstar 1
-  Fork 0 zelvek/Projetannuel
- Code  Issues 1  Pull requests 1  Projects 1  Wiki  Pulse  Graphs  Settings
-Tree: 990cf8489f Find file Copy pathProjetannuel/php/saveUser.php
-990cf84  22 minutes ago
-@zelvek zelvek save user final
-1 contributor
-RawBlameHistory
-183 lines (132 sloc)  3.73 KB
+
 <?php
 require "config.php";
 session_start();
