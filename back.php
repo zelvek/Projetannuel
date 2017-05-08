@@ -37,14 +37,14 @@
 //echo $_SESSION['email'];
 //echo $_SESSION['token'];
 //all work
-//require 'php/popup.php';
+require 'php/popup.php';
    ?>
 
 
 
 
 
-
+<!--
    <div class="row">
     <div class="col-xs-12 col-lg-12 ">
     <div class="col-lg-3"></div>
@@ -75,7 +75,7 @@
         </div>
         </div>
 
-
+-->
 
     <?php
 

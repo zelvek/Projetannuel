@@ -2,6 +2,7 @@
 
 require "ajoutFilm.php";
 require "conf.inc.php";
+require "config.php";
 
 if(count($_POST)==6
   && isset($_POST["picture"])
@@ -99,7 +100,7 @@ if( strlen($_POST["sortie"]) == 10 ){
 if ($error) {
   $_SESSION["errors_form"] = $listOfErrors;
   $_SESSION["data_form"] = $_POST;
-  header('Location: ajoutFilm.php');
+  header('Location: ../back.php');
 }else {
 
 $id = md5(time());
@@ -116,6 +117,7 @@ $id = md5(time());
   "Type"=>$_POST["genre"],
   "id"=>$id]);
 
+  header('Location: ../back.php');
 
 //  print_r($query->errorInfo());
 
