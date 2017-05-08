@@ -164,9 +164,6 @@ $query->execute([
 
 
 
-
-
-
 $query = $db->prepare("INSERT INTO tchat (pseudo, message) VALUES (:pseudo, :message )");
 $e = 'inscription';
 
