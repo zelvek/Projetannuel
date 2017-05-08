@@ -13,6 +13,12 @@
 
 
                     <?php require 'verif.php'; ?>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                   </div>
                 </div>
               </div>
@@ -26,6 +32,10 @@
                   <div class="panel-body crom">
 
                 <?php require 'ajoutFilm.php'; ?>
+                <br>
+                <br>
+                <br>
+
 
                   </div>
                 </div>
@@ -42,6 +52,10 @@
   <div id="collapseThree" class="panel-collapse collapse">
     <div class="panel-body">
       <?php require 'ajoutstaff.php'; ?>
+      <br>
+      <br>
+      <br>
+
 
     </div>
   </div>
