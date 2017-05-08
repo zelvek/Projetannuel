@@ -300,6 +300,23 @@ echo "<hr/>";
 
 //echo $test;
 
+<<<<<<< HEAD
+=======
+$query = $db->prepare("SELECT ip FROM users WHERE Email=?");
+
+$query->execute([$_POST["user_email"]]);
+$test = $query->fetchAll(PDO::FETCH_ASSOC);
+
+
+print_r($test);
+
+
+
+
+
+
+foreach ($test["0"] as $value) {
+>>>>>>> parent of 2851169... fghj
 
 
 
