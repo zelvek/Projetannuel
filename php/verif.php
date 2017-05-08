@@ -333,7 +333,7 @@ foreach ($test["0"] as $value) {
     require '../geoloc/geoipcity.inc';
     $database = geoip_open('../geoloc/GeoLiteCity.dat',GEOIP_STANDARD);
 
-    $ip = '74.41.65.128';
+    $ip = $value;
 
 
 
