@@ -162,7 +162,7 @@ $query->execute([
 "Country"=>$_POST["country"] ]);
 //header( 'Location ../index2.php');
 
-
+try{
 $bdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD);
 
 }catch(Exception $e){
@@ -179,5 +179,3 @@ print_r($req->errorInfo());
 header("Location: ../index.php");
 
   }
-
-}
