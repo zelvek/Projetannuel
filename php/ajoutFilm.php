@@ -1,5 +1,7 @@
+
+<center>
   <?php
-require "config.php";
+
 
  ?>
  <section>
@@ -46,3 +48,5 @@ $data_form = $_SESSION["data_form"];
 
 
  ?>
+
+ </center>

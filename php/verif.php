@@ -1,26 +1,12 @@
 
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Utilisateur Admin</title>
-
-
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/one-page-wonder.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
-          <link href="css/bootstrap.css" rel="stylesheet">
-      </head>
-
-
-      <body>
 
 
 
         <?php
-session_start();
-        require "../php/config.php";
+    //  session_start();
+    //require "php/config.php";
+
 
         echo "<div>";
         if(!empty($_SESSION["errors_form"])){
@@ -40,7 +26,7 @@ session_start();
 
 
 
-    <form class="" action="verif.php" method="post">
+    <form class="" action="back.php" method="post">
 
     <input type="email" name="user_email" value=""><br>
     <input type="submit" value="submit">
@@ -271,7 +257,7 @@ display:none;
 
 
 
-    $query = $db->prepare("SELECT Message FROM tchat WHERE Pseudo=?");
+    $query = $db->prepare("SELECT Message FROM tchat WHERE Pseudo=? ORDER BY ID");
 
 
 

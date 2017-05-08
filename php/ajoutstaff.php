@@ -1,6 +1,5 @@
 <?php
-session_start();
-require "config.php";
+//session_start();
 
 
 
@@ -23,7 +22,7 @@ $data_form = $_SESSION["data_form"];
 
 
 ?>
-   <h1>Ajoue de Staff</h1>
+   <h1>Ajout de Staff</h1>
 <form method="post" action="saveStaff.php">
 
 
