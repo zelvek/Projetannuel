@@ -380,4 +380,13 @@ display: none;
 
 
 
-<h2>Vous êtes liée actuellement avec <?php echo $saveid; ?></h2>
+<?php
+if ($saveid != 0 ) {
+echo "<h2>Vous êtes liée actuellement avec ".$saveid."</h2>";
+
+}else {
+  echo "Vous n'avez actuellement pas suffisament de like ou trop et nous ne pouvons vous relier avec quelqu'un";
+}
+
+
+ ?>
