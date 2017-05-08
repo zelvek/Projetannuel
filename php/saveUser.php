@@ -176,6 +176,6 @@ $req->execute(["pseudo" =>$_POST["email"],"message"=>'inscription']);
 
 
 print_r($req->errorInfo());
-header("Location: ../index.php");
-
+//header("Location: ../index.php");
+//aaaaa
   }
