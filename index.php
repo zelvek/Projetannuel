@@ -21,7 +21,6 @@ session_start();
 <body>
 
 
-  <!-- les cookies -->
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -64,7 +63,6 @@ session_start();
 
 
 
-  <!-- End Piwik Code -->
 
 
 
@@ -157,12 +155,10 @@ session_start();
 
 function isMobile() {
 
-// Check the server headers to see if they're mobile friendly
 if(isset($_SERVER["HTTP_X_WAP_PROFILE"])) {
     return true;
 }
 
-// If the http_accept header supports wap then it's a mobile too
 if(preg_match("/wap\.|\.wap/i",$_SERVER["HTTP_ACCEPT"])) {
     return true;
 }

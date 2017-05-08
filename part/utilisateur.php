@@ -1,19 +1,27 @@
-<div class="color">
-<div>
-ceci est la page d'option d'utilisateur
-</div>
-à mettre ici le changement de nom et de mot de passe, peut être aussi cette fois dans les utilisateur admin à la place de celle ci une page admin qui permet de rajouter des données à la bdd
+<?php
 
-
-<div>
-  a rajouter une option pour modérer le chat
-</div>
-<div >
-  rajouter une option pour changer de pseudo et de mot de passe + email
-</div>
+try {
+  $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD );
+}catch(Exception $e){
+  die("Erreur SQL : ".$e->getMessage() );
+}
 
 
 
+$query = $db->prepare("SELECT * FROM users WHERE Email=?");
+
+
+
+$query->execute([$_SESSION["email"]]);
+
+
+echo $query->errorInfo()[2];
+
+
+
+
+
+$user = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
 
@@ -22,4 +30,10 @@ ceci est la page d'option d'utilisateur
 
 
 
-</div>
+echo "votre ip actuelle est : ".$_SERVER['REMOTE_ADDR'];
+
+
+
+
+
+ ?>
