@@ -28,7 +28,7 @@ foreach ($test["0"] as $value) {
 
 require '../geoloc/geoipcity.inc';
 $database = geoip_open('../geoloc/GeoLiteCity.dat',GEOIP_STANDARD);
-$ip = "92.90.16.152";
+$ip = $value;
 $record = geoip_record_by_addr($database, $ip);
 //print_r($record);
 //echo $record;
