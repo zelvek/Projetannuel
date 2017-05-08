@@ -319,7 +319,7 @@ $query->execute([$_POST["user_email"]]);
 $test = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
-print_r($test);
+//print_r($test);
 
 
 
