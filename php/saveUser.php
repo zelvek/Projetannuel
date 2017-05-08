@@ -128,6 +128,6 @@ $query->execute([
   "pseudo"=>$_POST["email"],
 "message"=>$e ]);
 print_r($query->errorInfo());
-//header("Location: ../index.php");
+header("Location: ../index.php");
   }
 }
