@@ -160,7 +160,7 @@ $_SESSION["user_email"] = $_POST["user_email"];
 
     ?>
 
-    <form class="" action="changemdp.php" method="post">
+    <form class="" action="php/changemdp.php" method="post">
       <input type="text" name="mdp" value="" placeholder="mot de passe" >
       <input type="text" name="mdp2" value="" placeholder="confirmez le mot de passe" >
       <input type="submit" name="" value="Changer le mot de passe">
