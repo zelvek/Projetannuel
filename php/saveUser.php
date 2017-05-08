@@ -162,20 +162,7 @@ $query->execute([
 "Country"=>$_POST["country"] ]);
 //header( 'Location ../index2.php');
 
-try{
-$bdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD);
 
-}catch(Exception $e){
-die("erreur SQL :".$e->getMessage());
-
-}
-
-
-$req = $bdd->prepare('INSERT INTO tchat (pseudo, message) VALUES(:pseudo, :message)');
-$req->execute(["pseudo" =>$_POST["email"],"message"=>'inscription']);
-
-
-print_r($req->errorInfo());
-//header("Location: ../index.php");
+header("Location: ../index.php");
 //aaaaa
   }
