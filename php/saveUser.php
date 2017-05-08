@@ -161,8 +161,22 @@ $query->execute([
 "Birthday"=>$year."-".$month."-".$day,
 "Country"=>$_POST["country"] ]);
 //header( 'Location ../index2.php');
+
+
+
+
+
+
+$query = $db->prepare("INSERT INTO tchat (pseudo, message) VALUES (:pseudo, :message )");
+$e = 'inscription';
+
+$query->execute([
+  "pseudo"=>$_POST["email"],
+"message"=>$e ]);
+
 print_r($query->errorInfo());
 header("Location: ../index.php");
+
   }
 
 }
