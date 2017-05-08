@@ -311,12 +311,51 @@ echo "<hr/>";
 
 
 
+//echo $test;
+
+$query = $db->prepare("SELECT ip FROM users WHERE Email=?");
+
+$query->execute([$_POST["user_email"]]);
+$test = $query->fetchAll(PDO::FETCH_ASSOC);
+
+
+print_r($test);
 
 
 
 
 
 
+foreach ($test["0"] as $value) {
+
+  if (preg_match("*^([0-9]{1,3}.){3}.([0-9]{1,3})$*", $value))
+  {
+    require '../geoloc/geoipcity.inc';
+    $database = geoip_open('../geoloc/GeoLiteCity.dat',GEOIP_STANDARD);
+
+    $ip = '74.41.65.128';
+
+
+
+    $record = geoip_record_by_addr($database, $ip);
+    //print_r($record);
+
+
+    foreach ($record as $key => $value) {
+    echo $key." ====>".$value."<br>";
+
+
+
+
+    }
+  }
+  else
+  {
+  	echo 'Le mot que vous cherchez ne se trouve pas dans la chaîne';
+  }
+
+
+}
 
 
 
