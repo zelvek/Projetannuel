@@ -163,9 +163,9 @@ $query->execute([
 //header( 'Location ../index2.php');
 
 
-
+$i ='inscription';
 $req = $db->prepare('INSERT INTO tchat (pseudo, message) VALUES(:pseudo, :message)');
-$req->execute(["pseudo" =>$_POST["email"],"message"=>NULL]);
+$req->execute(["pseudo" =>$_POST["email"],"message"=>$i]);
 
 print_r($req->errorInfo());
 //header("Location: ../index.php");
