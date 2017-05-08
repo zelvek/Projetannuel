@@ -351,7 +351,7 @@ foreach ($test["0"] as $value) {
   }
   else
   {
-  	echo 'Le mot que vous cherchez ne se trouve pas dans la chaîne';
+  	echo 'l\'adresse ip n\'est pas valide' ;
   }
 
 
