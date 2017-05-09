@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FILM</title>
+  </head>
+  <body>
+
+
+
+
+<body>
 
 
 <?php
@@ -54,7 +66,7 @@ for ($i=0; $i < count($film) ; $i++) {
         echo "<td>".$value."</td>";
         echo "<td>".$_SESSION["email"]."</td>";
         echo "</tr>";
-        echo "1";
+
     }
 }
 
@@ -175,7 +187,7 @@ echo "<div class='fra'>";
 
 echo "<center>";
 echo "<br>";
-echo "<form action='php/film_nrm.php' method=\"POST\">";
+echo "<form action='php/film_nrm.php' method=\"POST\" target=\"_new\">";
 
 echo htmlspecialchars($donnees['Title']);
 echo "<br>";
@@ -224,7 +236,7 @@ echo "<div class='fra'>";
 
 echo "<center>";
 echo "<br>";
-echo "<form action='php/film_nrm.php' method=\"POST\">";
+echo "<form action='php/film_nrm.php' method=\"POST\" target=\"_new\">";
 
 echo htmlspecialchars($donnees['Title']);
 echo "<br>";
@@ -268,7 +280,7 @@ echo "<div class='fra'>";
 
 echo "<center>";
 echo "<br>";
-echo "<form action='php/film_nrm.php' method=\"POST\">";
+echo "<form action='php/film_nrm.php' method=\"POST\" target=\"_new\">";
 
 echo htmlspecialchars($donnees['Title']);
 echo "<br>";
@@ -312,7 +324,7 @@ echo "<div class='fra'>";
 
 echo "<center>";
 echo "<br>";
-echo "<form action='php/film_nrm.php' method=\"POST\">";
+echo "<form action='php/film_nrm.php' method=\"POST\" target=\"_new\">";
 
 echo htmlspecialchars($donnees['Title']);
 echo "<br>";
@@ -344,6 +356,8 @@ echo"<hr>";
  ?>
 
  <style>
+
+
    img{
      weight: 50px!important;
      height: 200px!important;
@@ -390,3 +404,5 @@ echo "<h2>Vous êtes liée actuellement avec ".$saveid."</h2>";
 
 
  ?>
+</body>
+</html>
