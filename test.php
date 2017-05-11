@@ -33,7 +33,6 @@ print_r($resp);
 
 var_dump( $resp );
 
-curl_getinfo($curl);
 echo "<br>";
 json_decode($resp, true);
 
