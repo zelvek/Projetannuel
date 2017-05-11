@@ -31,5 +31,5 @@ $resp = curl_exec($curl);
 // Close request to clear up some resources
 curl_close($curl);
 
-
+print_r(curl_getinfo($resp));
 print_r($resp);
