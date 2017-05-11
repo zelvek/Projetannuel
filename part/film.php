@@ -112,7 +112,7 @@ $test = array_diff($valeur["0"], $email["0"]);
 //print_r($test);
 
 
-if (count($email) < count($test) && $savenumer < count($test)) {
+if ( !empty($test) && $savenumer < count($test)) {
 $savenumber = count($test);
 $saveid = $value;
 }

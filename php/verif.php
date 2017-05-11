@@ -192,7 +192,7 @@ $_SESSION["user_email"] = $_POST["user_email"];
 
 
 
-    <form method="get" action="../php/ban.php">
+    <form method="get" action="php/ban.php">
         <button type="submit">BAN USER</button>
     </form>
 
