@@ -25,5 +25,15 @@ if(!curl_exec($curl)){
 }else {
   echo "qzdqzd";
 }
+
+
+print_r($resp);
+
+
+echo "<br>";
+json_decode($resp, true);
+
+
+print_r($resp);
 // Close request to clear up some resources
 curl_close($curl);
