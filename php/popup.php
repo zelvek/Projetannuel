@@ -12,7 +12,34 @@
                   <div class="panel-body">
 
 
-                    <?php require 'verif.php'; ?>
+                    <?php require 'verif.php';
+
+                    if (!isset($_SESSION['email'])) {
+                    header('Location: ../index.php');
+                    }else{
+
+                                              try{
+                                                  $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME , DB_USER, DB_PWD); // /!\ connection à la base de données /!\
+                                              }catch(Exception $e){
+                                                die("Erreur SQL : ".$e->getMessage() );
+                                              }
+
+                                              $query = $db->prepare('SELECT Is_admin FROM users WHERE email = :email;');
+                                                $query->execute(["email" =>$_SESSION['email']] );
+
+
+                                                $w = $query->fetch()["Is_admin"];
+
+
+                                                if ($w != 1) {
+                    header("Location : ../index.php");
+
+                                                }
+
+                                              }
+
+
+                    ?>
 
                     <br>
                     <br>
