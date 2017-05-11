@@ -7,13 +7,13 @@ define('API_KEY','TmhiLZMKtVSbsgfU');
 
 $url = "https://api.whatismymovie.com/1.0/?api_key=";
 
-$url2 = "https://api.whatismymovie.com/1.0/?api_key=TmhiLZMKtVSbsgfU&refinements=enabled&test=men+in+black";
+$url2 = "http://netflixroulette.net/api/api.php?actor=Nicolas%20Cage";
 
-/$curl = curl_init();
+$curl = curl_init();
 // Set some options - we are passing in a useragent too here
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.whatismymovie.com/1.0/?api_key=TmhiLZMKtVSbsgfU&text=drummer+of+the+band+explodes',
+    CURLOPT_URL => 'http://netflixroulette.net/api/api.php?actor=Nicolas%20Cage',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request',
      CURLOPT_HTTPGET => true
 ));
@@ -29,14 +29,29 @@ if(!curl_exec($curl)){
 }
 
 
-print_r($resp);
+
+//print_r($resp);
+//
 
 //var_dump( $resp );
 
 echo "<br>";
-json_decode($resp, true);
+$resp =json_decode($resp, true);
+//print_r($resp);
 
-var_dump( $resp );
+for ($i=0; $i < count($resp) ; $i++) {
+
+      foreach($resp["0"] as $key => $value) {
+if ($key == "category") {
+  echo "".$value."";
+  echo "<br>";}
+        
+
+
+    }
+}
+
+//var_dump( $resp );
 echo "<br>";
 
 //print_r($resp);
