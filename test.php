@@ -29,10 +29,14 @@ if(!curl_exec($curl)){
 
 print_r($resp);
 
+var_dump( $resp );
+
 
 echo "<br>";
 json_decode($resp, true);
 
+var_dump( $resp );
+echo "<br>";
 
 print_r($resp);
 // Close request to clear up some resources
