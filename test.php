@@ -9,12 +9,13 @@ $url = "https://api.whatismymovie.com/1.0/?api_key=";
 
 $url2 = "https://api.whatismymovie.com/1.0/?api_key=TmhiLZMKtVSbsgfU&refinements=enabled&test=men+in+black";
 
-$curl = curl_init();
+/$curl = curl_init();
 // Set some options - we are passing in a useragent too here
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_URL => 'https://api.whatismymovie.com/1.0/?api_key=TmhiLZMKtVSbsgfU&refinements=enabled&test=men+in+black',
-    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request',
+     CURLOPT_HTTPGET => true,
 ));
 // Send the request & save response to $resp
 $resp = curl_exec($curl);
