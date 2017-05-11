@@ -13,7 +13,7 @@ $url2 = "https://api.whatismymovie.com/1.0/?api_key=TmhiLZMKtVSbsgfU&refinements
 // Set some options - we are passing in a useragent too here
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.whatismymovie.com/1.0/?api_key=TmhiLZMKtVSbsgfU&text=drummer+of+the+band+explodes,+there+is+stonehenge+and+amplifier+going+to+eleven',
+    CURLOPT_URL => 'https://api.whatismymovie.com/1.0/?api_key=TmhiLZMKtVSbsgfU&text=drummer+of+the+band+explodes',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request',
      CURLOPT_HTTPGET => true
 ));
