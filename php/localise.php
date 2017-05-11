@@ -24,8 +24,15 @@ $test = $query->fetchAll(PDO::FETCH_ASSOC);
 //echo $test["0"]["ip"];
 
 
+
+
+
 foreach ($test["0"] as $value) {
 //  print_r($value);
+
+
+
+
 
 require '../geoloc/geoipcity.inc';
 $database = geoip_open('../geoloc/GeoLiteCity.dat',GEOIP_STANDARD);
@@ -33,9 +40,17 @@ $ip = $value;
 $record = geoip_record_by_addr($database, $ip);
 //print_r($record);
 //echo $record;
+
+
+if (!preg_match("*^([0-9]{1,3}.){3}.([0-9]{1,3})$*",$ip)) {
+  echo "ip non valide";
+}else {
 foreach ($record as $key => $value) {
 echo $key." ====>".$value."<br>";
 }
 
 }
+# code...
+}
+
  ?>
