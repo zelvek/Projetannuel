@@ -52,7 +52,9 @@ $savenumber = 0;
 
 
     if(!empty($film)){
-      echo "<table width='75%' border='4'>";
+
+
+    /*  echo "<table width='75%' border='4'>";
       echo "<tr>";
       echo "<td> Film Aimé </td>";
       echo "<td> Auteur </td>";
@@ -68,7 +70,7 @@ for ($i=0; $i < count($film) ; $i++) {
         echo "</tr>";
 
     }
-}
+}*/
 
 //selection de tout les utilisateurs
 
@@ -81,9 +83,10 @@ $email = $email->fetchall(PDO::FETCH_ASSOC);
 //print_r($email);
 
 $user = $db -> query("SELECT Email FROM users");
+//print_r($user);
 
 $user = $user->fetchall(PDO::FETCH_ASSOC);
-
+//print_r($user);
 
 
 //print_r($user);
@@ -94,29 +97,85 @@ for ($i=0; $i < count($user) ; $i++) {
     $valeur->execute(["email"=>$value]);
 
     $valeur = $valeur->fetchall(PDO::FETCH_ASSOC);
+//print_r($valeur);
 
+//echo "<br>";
 if ($valeur == NULL || $email == NULL){
 
 
 
 }else{
 //........................................................................................................................................................
+$a = ["a","b","r","a","z","w"];
+$b = ["a","b","c","a","w"];
 
-$test = array_diff($valeur["0"], $email["0"]);
+
+$a = array_diff_assoc($a,$b);
+//print_r($a);
+
+//print_r( $valeur);echo "<br><br>"; echo count($valeur);
 //echo $value;
 
+$val = $valeur["0"];
+$em = $email["0"];
+
+for ($e=1; $e <count($valeur) ; $e++) {
+array_push($val,$valeur[$e]['film']);
+}
+for ($r=1; $r <count($email) ; $r++) {
+array_push($em,$email[$r]['film']);
+}
+//echo $value;
+
+$save = $val;
+
+//print_r($val['film']);
+
+
+
+
+
+
+
+
+
+//print_r($valeur);
+//echo $value;
+//print_r($us);
+//echo $value." : ";
+$test = array_diff_assoc($val,$em);
+
+
+//print_r($test);
+//echo "<br>";
+
+//print_r ($val);
+
+
+
+
+
+
+
+//print_r($test);
+
+
+//print_r ($email['0']);
 //print_r($valeur);
 //print_r($email);
 
 
 //print_r($test);
 
-
-if ( !empty($test) && $savenumer < count($test)) {
+if ( !empty($test) && $savenumber < count($test)) {
 $savenumber = count($test);
 $saveid = $value;
+
+
+//echo $saveid;
 }
 
+//echo $saveid;
 
 
 
@@ -159,7 +218,9 @@ $reponse = $reponse->fetchall(PDO::FETCH_ASSOC);
 //echo $savenumber;
 //print_r($reponse["0"]);
 
+//print_r($reponse);
 
+//echo count($reponse);
 
 
 if(count($reponse)==0 ){
@@ -204,65 +265,11 @@ echo"<hr>";
 }else {
 
 
+//print_r($test);
+foreach ($test as $key => $value) {
 
-  foreach ($reponse["0"] as $value) {
-
-
-    $cherche = $db->prepare("SELECT Title, Picture, id FROM movies where id = :id");
-    $cherche->execute(["id"=>$value]);
-$_SESSION["Value"] = $value;
-    echo $query->errorInfo()[2];
-
-//print_r($cherche);
-
-
-
-while ($donnees = $cherche->fetch())
-{
-
-
-
-
-echo "<div class='fra'>";
-
-
-
-echo "<center>";
-echo "<br>";
-echo "<form action='php/film_nrm.php' method=\"POST\" target=\"_new\">";
-
-echo htmlspecialchars($donnees['Title']);
-echo "<br>";
-echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
-
-echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
-
-echo "<br>";
-
-
-echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
-
-echo "<br>";
-echo "</form>";
-
-echo "</center>";
-
-echo"<hr>";
-}
-
-
-//".htmlspecialchars($donnees['Title'])."
-}
-
-
-
-if (count($cherche)< 10 ) {
-
-
-  $reponse = $db->query("SELECT Title, Picture, id FROM movies ORDER BY Date_out DESC LIMIT 0, 9");
-
-
-  echo $query->errorInfo()[2];
+$reponse = $db->prepare("SELECT Title, Picture, id FROM movies where id =:id");
+$reponse->execute(["id"=>$value]);
 
 while ($donnees = $reponse->fetch())
 {
@@ -294,7 +301,58 @@ echo "</center>";
 echo"<hr>";
 }
 
+
 }
+
+if(count($test) < 10){
+
+
+  echo "<div id=\"auto\">";
+echo "<h3>Les prochaines réponses sont autogénérées  : </h3>";
+  echo "<hr></div><br>";
+
+$nb = 10 - count($test);
+
+$reponse = $db->query("SELECT Title, Picture, id FROM movies ORDER BY Date_out DESC LIMIT 0,".$nb);
+
+
+echo $query->errorInfo()[2];
+
+while ($donnees = $reponse->fetch())
+{
+
+echo "<div class='fra'>";
+
+
+
+echo "<center>";
+echo "<br>";
+echo "<form action='php/film_nrm.php' method=\"POST\" target=\"_new\">";
+
+echo htmlspecialchars($donnees['Title']);
+echo "<br>";
+echo "<img src=".htmlspecialchars($donnees['Picture'])." alt=".htmlspecialchars($donnees['Title'])."> ";
+
+echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" value=".$donnees['id'].">";
+
+echo "<br>";
+
+
+echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+
+echo "<br>";
+echo "</form>";
+
+echo "</center>";
+
+echo"<hr>";
+}
+
+
+
+}
+
+
 
 }
 
@@ -380,6 +438,11 @@ display: none;
      margin-left: auto;
      margin-right: auto;
    }
+   #auto{
+
+background-color: rgb(150, 150, 150) !important;
+
+   }
 
 
 
@@ -388,7 +451,7 @@ display: none;
 
 
 <?php
-if ($saveid != 0 ) {
+if ($test != 0 ) {
 echo "<h2>Vous êtes liée actuellement avec ".$saveid."</h2>";
 
 }else {
