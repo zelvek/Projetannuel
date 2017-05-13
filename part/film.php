@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>FILM</title>
   </head>
-  <body>
+
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 
 
 
@@ -252,7 +253,8 @@ echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" va
 echo "<br>";
 
 
-echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+echo "<input type=\"submit\" name=\"submit\" value=\"voir\" >";
+echo "<i class=\"fa fa-telegram\" aria-hidden=\"true\"></i>";
 
 echo "<br>";
 echo "</form>";
@@ -291,7 +293,9 @@ echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" va
 echo "<br>";
 
 
-echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+echo "<input type=\"submit\" name=\"submit\" value=\"voir\" >";
+echo "<i class=\"fa fa-telegram\" aria-hidden=\"true\"></i>";
+
 
 echo "<br>";
 echo "</form>";
@@ -338,7 +342,9 @@ echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" va
 echo "<br>";
 
 
-echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+echo "<input type=\"submit\" name=\"submit\" value=\"voir\" >";
+echo "<i class=\"fa fa-telegram\" aria-hidden=\"true\"></i>";
+
 
 echo "<br>";
 echo "</form>";
@@ -386,7 +392,9 @@ echo "<input type=\"checkbox\" name=\"id\" class=\"test\" checked=\"checked\" va
 echo "<br>";
 
 
-echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" >";
+echo "<input type=\"submit\" name=\"submit\" value=\"voir\" >";
+echo "<i class=\"fa fa-telegram\" aria-hidden=\"true\"></i>";
+
 
 echo "<br>";
 echo "</form>";

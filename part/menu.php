@@ -1,6 +1,9 @@
 <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+
 
     <nav>
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -14,9 +17,16 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="index2.php">Lectus</a>
+                  <a class="navbar-brand" id="incon" href="index2.php">Lectus</a>
+
+<style>
+#incon:hover{
+
+color: red;
 
 
+}
+</style>
 <?php session_start();
 
 
@@ -78,7 +88,7 @@ require "php/coo.php";
 <li>
 
   <a href="php/disco.php">
-    <i class="fa fa-power-off" aria-hidden="true"></i>
+    <i class="fa fa-power-off" id="incon" aria-hidden="true"></i>
 
   </a>
 
@@ -112,7 +122,7 @@ require "php/coo.php";
 </center>
 
 
-            
+
             </div>
         </div>
 

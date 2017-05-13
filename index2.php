@@ -17,13 +17,13 @@
     <link href="css/one-page-wonder.css" rel="stylesheet">
 
     <link href="css/stylehhh.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="icon.png" />
+    <link rel="icon" type="image/png" href="icon.png" />
 
 </head>
 
 <body id="fond">
 
-  
+
 <center>
 
   <?php
@@ -39,7 +39,6 @@ include("part/menu.php");
         <?php include ("part/film.php"); ?>
 
 
-        <?php include("part/footer.php"); ?>
 
     </div>
 
@@ -48,6 +47,8 @@ include("part/menu.php");
 
 
     <script src="js/bootstrap.min.js"></script>
+    <?php include("part/footer.php"); ?>
+
 </center>
 </body>
 

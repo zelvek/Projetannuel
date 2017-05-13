@@ -5,7 +5,8 @@
     <link rel = "stylesheet" href = "css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/backgroundFront.css">
-    <link rel="icon" type="image/x-ico" href="image/icon.ico" />
+    <link rel="icon" type="image/png" href="icon.png" />
+
   </head>
 
 
@@ -23,43 +24,8 @@ session_start();
 
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-    <script>
-    window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#000"
-        },
-        "button": {
-          "background": "#f1d600"
-        }
-      },
-      "theme": "edgeless",
-      "content": {
-        "message": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies.",
-        "dismiss": "Pas de Problème",
-        "link": "Le Twitter du Dev",
-        "href": "https://twitter.com/root_Updated"
-      }
-    })});
 
 
-
-
-
-
-
-
-    </script>
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-3323508660354393",
-        enable_page_level_ads: true
-      });
-    </script>
 
 
 
@@ -231,8 +197,15 @@ return false;
 
 
 
+<center class="aa">
 
+         <?php require "part/footer.php" ?>
+</center>
 
-<?php
-require "part/footer.php";
-?>
+<style media="screen">
+  .aa{
+
+margin-left: -95%;
+color: white;
+  }
+</style>
