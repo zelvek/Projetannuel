@@ -74,6 +74,8 @@ $_POST['nom'] = rtrim($_POST['nom']);
 
 $chaine = explode(" ", $_POST['nom']);
 
+
+
 //echo "AAAA".count($chaine);
 
 if ($_POST['type'] == "acteur") {
@@ -91,11 +93,11 @@ $url2 = $url.$type;
 
 }
 
-
 for ($i=0; $i <count($chaine)-1 ; $i++) {
 $url2 = $url2.$chaine[$i].$hash;
 }
 $url2 = $url2.$chaine[count($chaine)-1];
+
 //echo $url2;
 
 
@@ -104,7 +106,7 @@ $curl = curl_init();
 // Set some options - we are passing in a useragent too here
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'http://netflixroulette.net/api/api.php?actor=Nicolas%20Cage',
+    CURLOPT_URL => $url2,
     CURLOPT_USERAGENT => 'Codular Sample cURL Request',
      CURLOPT_HTTPGET => true
 ));
