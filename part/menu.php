@@ -1,5 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+
     <nav>
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
