@@ -52,7 +52,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Ajout d'utilisateur</a>
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Ajout de film</a>
                   </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse">
@@ -70,23 +70,7 @@
 
 
               <!-- /.panel -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h4 class="panel-title">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Ajout Staff</a>
-    </h4>
-  </div>
-  <div id="collapseThree" class="panel-collapse collapse">
-    <div class="panel-body">
-      <?php require 'ajoutstaff.php'; ?>
-      <br>
-      <br>
-      <br>
 
-
-    </div>
-  </div>
-</div>
 <!-- /.panel -->
 
 <!-- /.panel -->

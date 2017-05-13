@@ -4,11 +4,11 @@
 
 session_start();
 
+require "functions.php";
 
 
 
  $_SESSION['film'] = $_POST['id'];
-require "functions.php";
 try {
   $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD );
 }catch(Exception $e){
@@ -107,7 +107,47 @@ img{"email"
 
 }
 </style>
+
+
+
+
+
+
 <?php
+
+
+                          try{
+                              $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME , DB_USER, DB_PWD); // /!\ connection à la base de données /!\
+                          }catch(Exception $e){
+                            die("Erreur SQL : ".$e->getMessage() );
+                          }
+
+                          $query = $db->prepare('SELECT Is_admin FROM users WHERE email = :email;');
+                            $query->execute(["email" =>$_SESSION['email']] );
+
+
+                            $w = $query->fetch()["Is_admin"];
+
+
+                            if ($w == 1) {
+
+
+                            echo  "<form action=\"change_image.php\" method=\"post\">
+
+                          <input type= \"text\" name=\"picture\" placeholder=\"adresse de l'image \">
+                              <input type=\"submit\">
+                              </form>"
+
+?>
+
+
+
+<?php
+
+
+
+                            }
+
 
 
 
