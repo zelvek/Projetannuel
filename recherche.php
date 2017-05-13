@@ -126,7 +126,7 @@ if(!curl_exec($curl)){
 }
 
 
-echo $url2;
+//echo $url2;
 
 //echo "<br>";
 $id = 0;
