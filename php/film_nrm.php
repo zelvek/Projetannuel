@@ -1,4 +1,5 @@
 
+<link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
 
 <?php
 
@@ -63,12 +64,15 @@ $like = $like->fetchall(PDO::FETCH_ASSOC);
 //print_r($like);
 //echo Count($like);
 if (count($like) == 0) {
-  echo "<button type=\"button\" name=\"button\" onclick=\"document.location.href = 'like.php'\">J'aime </button>";
+  echo "<button type=\"button\" name=\"button\" onclick=\"document.location.href = 'like.php'\">j'aime </button>";
+  echo "<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i>";
   echo "</div>";
 
 }else {
 
   echo "<button type=\"button\" name=\"button\" onclick=\"document.location.href = 'unlike.php'\">J'aime plus </button>";
+  echo "<i class=\"fa fa-thumbs-o-down\" aria-hidden=\"true\"></i>
+";
   echo "</div>";
 
 }

@@ -1,12 +1,15 @@
+
 <div class="row">
           <div class="col-lg-12">
             <div class="panel-group" id="accordion">
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Vérification utilisateur
-                    </a>
-                  </h4>
+                    <center>
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Vérification utilisateur           </a><i class="fa fa-eye" aria-hidden="true"></i></h4>
+
+</center>
+
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse">
                   <div class="panel-body">
@@ -52,7 +55,9 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Ajout de film</a>
+                      <center>
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Ajout de film           </a><i class="fa fa-plus" aria-hidden="true"></i>
+  </center>
                   </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse">
@@ -67,7 +72,6 @@
                   </div>
                 </div>
               </div>
-
 
               <!-- /.panel -->
 
