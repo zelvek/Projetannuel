@@ -313,7 +313,7 @@ echo "<h3>Les prochaines réponses sont autogénérées  : </h3>";
 
 $nb = 10 - count($test);
 
-$reponse = $db->query("SELECT Title, Picture, id FROM movies ORDER BY Date_out DESC LIMIT 0,".$nb);
+$reponse = $db->query("SELECT Title, Picture, id FROM movies ORDER BY RAND() DESC LIMIT 0,".$nb);
 
 
 echo $query->errorInfo()[2];
