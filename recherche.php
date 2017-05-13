@@ -15,6 +15,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+
+>
     <link href="css/one-page-wonder.css" rel="stylesheet">
     <link href="css/stylehhh.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -43,7 +45,7 @@
 
 <center>
    <form class="" action="recherche.php" method="post">
-   <input type="text" name="nom" value="" placeholder="entrez le nom de votre film / acteur / réalisateur" size="45">
+   <input type="text" required="required" name="nom" value="" placeholder="entrez le nom de votre film / acteur / réalisateur"  size="45">
    <select name="type">
    <option value="acteur">Acteur</option>
    <option value="titre">Titre de Film</option>
@@ -124,7 +126,7 @@ if(!curl_exec($curl)){
 }
 
 
-
+echo $url2;
 
 //echo "<br>";
 $id = 0;
@@ -136,7 +138,43 @@ $img = 0;
 
 $resp =json_decode($resp, true);
 
+if (isset($resp['errorcode'])) {
+echo "<center>";
+  echo "la réponse n'est pas dans notre BDD retentez plus tard ou contactez nous pour que nous l'ajoutions =)";
+
+?>
+
+<br>
+<a class="twitter-share-button" target="_blank"
+  href="https://twitter.com/intent/tweet?text=hey%20il%20manque%20un%20film%20@root_updated"
+  data-size="large">
+Tweet</a>
+
+</center>>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<?php
+
+  die();
+}
+
+
 for ($i=0; $i < count($resp) ; $i++) {
+
 
       foreach($resp[$i] as $key => $value) {
 //echo $key.'========>'.$value."<br>";
@@ -174,6 +212,7 @@ $category = $value;
 
 
 
+
 //____________________________________________________________________
 }
 
@@ -190,7 +229,10 @@ $filmcheck = $query->fetchAll(PDO::FETCH_ASSOC);
 
 if ($filmcheck != null) {
 
-
+  if($id == 0) {
+    echo "aucun film existe";
+    die();
+  }
 
   echo "<div class='fra'>";
 
