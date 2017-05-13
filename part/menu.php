@@ -36,6 +36,9 @@ require "php/coo.php";
                         <a href="chat.php"> Chat</a>
                       </li>
                       <li>
+                        <a href="recherche.php"> recherche</a>
+                      </li>
+                      <li>
                         <a href="option.php"> <?php   echo $_SESSION['email'];  ?> </a>
                         <li>
 

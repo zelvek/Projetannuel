@@ -1,23 +1,61 @@
-<form class="" action="test.php" method="post">
-<input type="text" name="nom" value="" placeholder="entrez le nom de votre film / acteur / réalisateur" size="45">
-<select name="type">
-<option value="acteur">Acteur</option>
-<option value="titre">Titre de Film</option>
-<option value="realisateur">Realisateur</option>
+<!DOCTYPE html>
+<html lang="en">
 
-</select>
-<input type="submit" name="" value="Ok">
-</form>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LECTUS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+    <link href="css/stylehhh.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
 
 
 
 
+  <?php include("part/menu.php");
+
+
+//echo $_SESSION['email'];
+//echo $_SESSION['token'];
+//all work
+
+   ?>
+
+
+<center>
+   <form class="" action="recherche.php" method="post">
+   <input type="text" name="nom" value="" placeholder="entrez le nom de votre film / acteur / réalisateur" size="45">
+   <select name="type">
+   <option value="acteur">Acteur</option>
+   <option value="titre">Titre de Film</option>
+   <option value="realisateur">Realisateur</option>
+
+   </select>
+   <input type="submit" name="" value="Ok">
+   </form>
+</center>
 <?php
 
-
-
-
-require "php/config.php";
+//require "php/config.php";
 try{
 $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PWD);
 }catch(Exception $e){
@@ -36,7 +74,7 @@ $_POST['nom'] = rtrim($_POST['nom']);
 
 $chaine = explode(" ", $_POST['nom']);
 
-echo "AAAA".count($chaine);
+//echo "AAAA".count($chaine);
 
 if ($_POST['type'] == "acteur") {
 $type = "actor=";
@@ -58,7 +96,7 @@ for ($i=0; $i <count($chaine)-1 ; $i++) {
 $url2 = $url2.$chaine[$i].$hash;
 }
 $url2 = $url2.$chaine[count($chaine)-1];
-echo $url2;
+//echo $url2;
 
 
 
@@ -79,14 +117,14 @@ $resp = curl_exec($curl);
 if(!curl_exec($curl)){
     die('Error: "' . curl_error($curl) . '" - Code: ' . curl_errno($curl));
 }else {
-  echo "<br>";
-  echo "ça marche";
+//  echo "<br>";
+  //echo "ça marche";
 }
 
 
 
 
-echo "<br>";
+//echo "<br>";
 $id = 0;
 $title =0;
 $year =0;
@@ -101,8 +139,9 @@ for ($i=0; $i < count($resp) ; $i++) {
       foreach($resp[$i] as $key => $value) {
 //echo $key.'========>'.$value."<br>";
 //_____________________________________________________________________
-if ($key == 'id') {
+if ($key == 'show_id') {
 $id = $value;
+
 }
 if ($key == 'show_title') {
 $title = $value;
@@ -120,7 +159,7 @@ $summary = $value;
 if ($key == 'poster') {
 $img = $value;
 //echo "<img src=".$img." alt=".$title.">";
-echo "<br>";
+//echo "<br>";
 }
 if ($key == 'category') {
 
@@ -219,16 +258,16 @@ if ($filmcheck != null) {
 
 
 
-echo "null";
+//echo "null";
 }
 
 
 
 
 
-echo "<br>";
+//echo "<br>";
 
-echo "_________________________________________________";
+//echo "_________________________________________________";
 
 
 
@@ -236,3 +275,75 @@ echo "_________________________________________________";
 curl_close($curl);
 
 }
+
+
+ ?>
+ <style>
+
+
+   img{
+     weight: 50px!important;
+     height: 200px!important;
+
+   }
+
+   .fra{
+
+background-color: rgba(225, 225, 225, .8);
+
+   }
+
+   button{
+
+     margin-left: -20px;
+   }
+
+
+   .test{
+
+display: none;
+
+   }
+
+   input{
+
+     margin-left: auto;
+     margin-right: auto;
+   }
+   #auto{
+
+background-color: rgb(150, 150, 150) !important;
+
+   }
+
+
+
+ </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <?php include("part/footer.php"); ?>
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
