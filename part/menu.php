@@ -3,8 +3,6 @@
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="icon.png" />
   <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
-
-
     <nav>
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 

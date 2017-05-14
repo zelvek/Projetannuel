@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/backgroundFront.css">
     <link rel="icon" type="image/png" href="icon.png" />
+    <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/d4bd7784033c6fcc093510435d951554_0.js" async></script>
+     Verify settings
 
   </head>
 
@@ -47,6 +49,8 @@ session_start();
 
 
   <script>
+
+
   cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
     alert('Vous avez trouvé notre easter Egg bien joué =) ');
     document.location.href="part/gardian.php";
