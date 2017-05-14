@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/backgroundFront.css">
     <link rel="icon" type="image/png" href="icon.png" />
-    <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/d4bd7784033c6fcc093510435d951554_0.js" async></script>
-     Verify settings
+    
 
   </head>
 
@@ -33,7 +32,26 @@ session_start();
 
 
 
+    <SCRIPT LANGUAGE="JavaScript">
+    <!-- Disable
+    function disableselect(e){
+    return false
+    }
 
+    function reEnable(){
+    return true
+    }
+
+    //if IE4+
+    document.onselectstart=new Function ("return false")
+    document.oncontextmenu=new Function ("return false")
+    //if NS6
+    if (window.sidebar){
+    document.onmousedown=disableselect
+    document.onclick=reEnable
+    }
+    //-->
+    </script>
 
 
 <div class="">
