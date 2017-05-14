@@ -72,6 +72,10 @@
 </style>
 <a href="http://www.esgi.fr" target="_blank">
 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+
+
+<a href="http://www.twitter.com/root_updated/" target="_blank">
+<i class="fa fa-twitter" aria-hidden="true"></i>
 </a>
 
     </div>

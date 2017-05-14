@@ -57,6 +57,8 @@ html, body {
 
 body {
   background-image: url('https://i.ytimg.com/vi/5znji1uGNIs/maxresdefault.jpg');
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
 }
 
 svg {
