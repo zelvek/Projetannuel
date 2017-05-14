@@ -9,7 +9,6 @@
 <br>
 <br><br><br>
 
-<a href="part/gardian.php">
         <div class="loading-wrap">
   <div class="triangle1"></div>
   <div class="triangle2"></div>

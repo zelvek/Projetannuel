@@ -29,6 +29,22 @@
 
     <div class="container">
 
+      <script src="js/namuol-cheet.js/cheet.min.js"
+              type="text/javascript"></script>
+
+      <script src="js/namuol-cheet.js/cheet.js" type="text/javascript">*
+
+
+      </script>
+
+
+      <script>
+      cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+        alert('Vous avez trouvé notre easter Egg bien joué =) ');
+        document.location.href="part/gardian.php";
+      });
+      </script>
+
   <?php include("part/utilisateur.php") ?>
 
 
@@ -37,7 +53,7 @@
 
 
 
-  
+
 
         <hr class="featurette-divider">
 
