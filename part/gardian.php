@@ -269,32 +269,8 @@ background-repeat: no-repeat;
         transform: translate(50%, 50%) translate3d(-42%, -43%, 0vw);
 z-index: 4;
 }
-body #wrapper #logo {
-width: 50%;
-height: 25%;
-background: url(https://i.imgsafe.org/1af0633780.png);
-background-position: center center;
-background-repeat: no-repeat;
-background-size: 80% 80%;
-position: absolute;
-left: 50%;
-bottom: 5%;
--webkit-transform: translate(-50%, 0);
-        transform: translate(-50%, 0);
-z-index: 25;
-}
-body #wrapper #logo #tickets {
-width: 100%;
-height: 50%;
-position: absolute;
-background: url(https://i.imgsafe.org/1af0555bcb.png);
-background-position: inherit;
-background-repeat: inherit;
-background-size: inherit;
-bottom: -50%;
-left: 0;
-cursor: pointer;
-}
+
+
 
 @-webkit-keyframes rotateSnova {
 0% {
