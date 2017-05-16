@@ -137,7 +137,7 @@ echo "</td></tr></table>";
 
   if($error == true){
 
-
+echo "les mots de passe ne correspondent pas ";
 
   }else {
 
