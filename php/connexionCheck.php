@@ -33,11 +33,11 @@ if($query->fetch()["Is_delete"] != 1){
 
 
 
-      header('Location: ../index2.php');
+      header('Location: ../admin/index.html.php');
     }else {
           header('Location: ../index.php');
   }
-  
+
 }else {
       header('Location: ../index.php');
   }

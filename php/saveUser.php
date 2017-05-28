@@ -21,11 +21,15 @@ if( count($_POST)==11
   }catch(Exception $e){
   die("erreur SQL :".$e->getMessage());
   }
+
+
+
 $_POST["name"] = trim($_POST["name"]);
 $_POST["nickname"] = trim($_POST["nickname"]);
 $_POST["surname"] = trim($_POST["surname"]);
 $_POST["birthday"] = trim($_POST["birthday"]);
 $_POST["email"] = trim($_POST["email"]);
+
 if (strlen($_POST["name"])<2 || strlen($_POST["name"])> 50  ){
   $error = true;
   $listOfErrors[] = 1;
