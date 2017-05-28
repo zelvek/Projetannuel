@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>LECTUS</title>
+    <link rel="icon" type="image/x-ico" href="image/icon.ico" />
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/one-page-wonder.css" rel="stylesheet">
@@ -20,6 +21,22 @@
 </head>
 
 <body>
+
+  <script src="js/namuol-cheet.js/cheet.min.js"
+          type="text/javascript"></script>
+
+  <script src="js/namuol-cheet.js/cheet.js" type="text/javascript">*
+
+
+  </script>
+
+
+  <script>
+  cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+    alert('Vous avez trouvé notre easter Egg bien joué =) ');
+    document.location.href="part/gardian.php";
+  });
+  </script>
 
   <?php include("part/menu.php"); ?>
 

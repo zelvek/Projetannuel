@@ -18,6 +18,8 @@ while ($donnees = $reponse->fetch())
 	echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : ' . htmlspecialchars($donnees['message']) . '</p>';
 }
 
+
+print_r($donnees);
 $reponse->closeCursor();
 
 ?>

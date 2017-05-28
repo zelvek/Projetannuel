@@ -18,7 +18,9 @@ $listOfCountry = [
                     "us" => "American",
                     "fr" => "France",
                     "gr" => "German",
-                    "it" => "Italia"
+                    "it" => "Italia",
+                    "es" => "Espagna",
+                    "Bg" => "Belgian"
 
 ];
 

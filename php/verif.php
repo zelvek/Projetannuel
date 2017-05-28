@@ -1,26 +1,36 @@
 
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Utilisateur Admin</title>
-
-
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/one-page-wonder.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
-          <link href="css/bootstrap.css" rel="stylesheet">
-      </head>
-
-
-      <body>
 
 
 
         <?php
-session_start();
-        require "../php/config.php";
+    // session_start();
+//  require "config.php";
+
+
+if (!isset($_SESSION['email'])) {
+header('Location: ../index.php');
+}else{
+
+                          try{
+                              $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME , DB_USER, DB_PWD); // /!\ connection à la base de données /!\
+                          }catch(Exception $e){
+                            die("Erreur SQL : ".$e->getMessage() );
+                          }
+
+                          $query = $db->prepare('SELECT Is_admin FROM users WHERE email = :email;');
+                            $query->execute(["email" =>$_SESSION['email']] );
+
+
+                            $w = $query->fetch()["Is_admin"];
+
+
+                            if ($w != 1) {
+header("Location : ../index.php");
+
+                            }
+
+                          }
 
         echo "<div>";
         if(!empty($_SESSION["errors_form"])){
@@ -40,7 +50,7 @@ session_start();
 
 
 
-    <form class="" action="verif.php" method="post">
+    <form class="" action="back.php" method="post">
 
     <input type="email" name="user_email" value=""><br>
     <input type="submit" value="submit">
@@ -174,7 +184,7 @@ $_SESSION["user_email"] = $_POST["user_email"];
 
     ?>
 
-    <form class="" action="changemdp.php" method="post">
+    <form class="" action="php/changemdp.php" method="post">
       <input type="text" name="mdp" value="" placeholder="mot de passe" >
       <input type="text" name="mdp2" value="" placeholder="confirmez le mot de passe" >
       <input type="submit" name="" value="Changer le mot de passe">
@@ -182,7 +192,7 @@ $_SESSION["user_email"] = $_POST["user_email"];
 
 
 
-    <form method="get" action="ban.php">
+    <form method="get" action="php/ban.php">
         <button type="submit">BAN USER</button>
     </form>
 
@@ -269,9 +279,10 @@ display:none;
     }
 
 
+  }
+echo "<hr>";
 
-
-    $query = $db->prepare("SELECT Message FROM tchat WHERE Pseudo=?");
+    $query = $db->prepare("SELECT Message FROM tchat WHERE Pseudo=? ORDER BY ID");
 
 
 
@@ -309,17 +320,21 @@ echo "</table>";
 }
 echo "<hr/>";
 
+$_SESSION['locate'] = $_POST["user_email"];
+
+?>
+<form class="" action="php/localise.php" method="post" target="_blank">
+<input type="submit" name="" value="LOCALISER">
+
+
+</form>
 
 
 
 
 
 
-
-
-
-
-
+<?php
 
 
 
@@ -329,7 +344,9 @@ echo "<hr/>";
 
 
 
-    }
+
+
+
 
 
 

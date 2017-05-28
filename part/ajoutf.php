@@ -6,24 +6,23 @@
     <meta name="author" content="">
     <title>Ajout</title>
 
-
-
-
-
-
   </head>
 
  <body id="fond">
 
+    <?php 
 
-  
 
-    <?php require "../php/conf.inc.php" ; ?>
+    require "../php/conf.inc.php" ; 
+
+    ?>
 
 <section>
 
 
   <?php
+
+  
 
   echo "<div>";
   if(!empty($_SESSION["errors_form"])){
@@ -42,7 +41,6 @@
 
   ?>
 </section>
-
 
 
 

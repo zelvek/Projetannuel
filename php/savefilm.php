@@ -2,6 +2,7 @@
 
 require "ajoutFilm.php";
 require "conf.inc.php";
+require "config.php";
 
 if(count($_POST)==6
   && isset($_POST["picture"])
@@ -99,22 +100,26 @@ if( strlen($_POST["sortie"]) == 10 ){
 if ($error) {
   $_SESSION["errors_form"] = $listOfErrors;
   $_SESSION["data_form"] = $_POST;
-  header('Location: ajoutFilm.php');
+  header('Location: ../back.php');
 }else {
 
-
+$id = md5(time());
   echo ($year );
   echo ($month);
   echo ($day );
-  $query = $db->prepare("INSERT INTO movies (Picture, Title, Description, Date_out, Category, Type) VALUES (:Picture, :Title, :Description, :Date_out, :Categorie, :Type )");
+  $query = $db->prepare("INSERT INTO movies (Picture, Title, Description, Date_out, Category, Type, id) VALUES (:Picture, :Title, :Description, :Date_out, :Categorie, :Type, :id )");
   $query->execute([
   "Picture"=>$_POST["picture"],
   "Title"=>$_POST["title"],
   "Description"=>$_POST["description"],
   "Date_out"=>$year."-".$month."-".$day,
   "Categorie"=>$_POST["categorie"],
-  "Type"=>$_POST["genre"]]);
-  print_r($query->errorInfo());
+  "Type"=>$_POST["genre"],
+  "id"=>$id]);
+
+  header('Location: ../back.php');
+
+//  print_r($query->errorInfo());
 
     }
 

@@ -34,23 +34,32 @@
   <?php include("part/menu.php");
 
 
-echo $_SESSION['email'];
-echo $_SESSION['token'];
-
-
+//echo $_SESSION['email'];
+//echo $_SESSION['token'];
+//all work
+require 'php/popup.php';
    ?>
 
 
+   <script src="js/namuol-cheet.js/cheet.min.js"
+           type="text/javascript"></script>
+
+   <script src="js/namuol-cheet.js/cheet.js" type="text/javascript">*
 
 
+   </script>
 
 
+   <script>
+   cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+     alert('Vous avez trouvé notre easter Egg bien joué =) ');
+     document.location.href="part/gardian.php";
+   });
+   </script>
 
 
-
-
-
-    <div class="row">
+<!--
+   <div class="row">
     <div class="col-xs-12 col-lg-12 ">
     <div class="col-lg-3"></div>
     <a href="php/verif.php" class="myButton btn btn-send col-lg-6"  target=_blank>Utilisateurs</a>
@@ -63,7 +72,7 @@ echo $_SESSION['token'];
     <div class="row">
     <div class="col-xs-12 col-lg-12 ">
     <div class="col-lg-3"></div>
-    <a href="part/ajoutf.php" class="myButton btn btn-send col-lg-6"target="_blank">Ajout Film</a> <br>
+    <a href="php/ajoutFilm.php" class="myButton btn btn-send col-lg-6"target="_blank">Ajout Film</a> <br>
     <div class="col-lg-3"></div>
     </div>
     </div>
@@ -76,9 +85,11 @@ echo $_SESSION['token'];
     <div class="col-lg-3"></div>
     </div>
     </div>
-  
+
         </div>
         </div>
+
+-->
 
     <?php
 
@@ -114,13 +125,12 @@ echo $_SESSION['token'];
 
     echo"</center>";
 
+//echo "<div id =\"pop\">";
+//require '/php/verif.php';
+//echo "</div>";
 
 
     ?>
-
-
-
-
 
 
 

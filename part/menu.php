@@ -1,5 +1,8 @@
 <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
     <nav>
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
@@ -12,10 +15,20 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="index2.php">Lectus</a>
+                  <a class="navbar-brand" id="incon" href="index2.php">Lectus</a>
+
+<style>
+#incon:hover{
+
+color: red;
 
 
+}
+</style>
 <?php session_start();
+
+
+unset($_SESSION["film"]);
 
 require "php/functions.php";
 require "php/coo.php";
@@ -28,21 +41,17 @@ require "php/coo.php";
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                      <li>
-                          <a href="#serie">Film</a>
-                      </li>
-                      <li>
-                          <a href="event.php">Serie</a>
-                      </li>
-                      <li>
-                          <a href="#jeux">Animé</a>
-                      </li>
+
                       <li>
                         <a href="chat.php"> Chat</a>
                       </li>
                       <li>
+                        <a href="recherche.php"> recherche</a>
+                      </li>
+                      <li>
                         <a href="option.php"> <?php   echo $_SESSION['email'];  ?> </a>
                         <li>
+
 
 
 
@@ -73,26 +82,15 @@ require "php/coo.php";
                               echo "</li>";
                             }
 
-
-
-
-
-
-
                            ?>
+<li>
 
+  <a href="php/disco.php">
+    <i class="fa fa-power-off" id="incon" aria-hidden="true"></i>
 
+  </a>
 
-
-
-
-
-
-
-
-
-
-
+</li>
 
                   </ul>
               </div>
@@ -118,13 +116,14 @@ require "php/coo.php";
                 }
                 </style>
 <center>
-                <li> <a href="php/disco.php">
-                <img class="tep" src="image/offline.png" alt="">
-                </a>
+
 </center>
 
 
-              </li>
+
             </div>
         </div>
+
+
+
     </header>

@@ -1,15 +1,11 @@
 <?php
+require 'config.php';
 
-echo ($_POST["name"]);
-echo ($_POST["surname"]);
-echo ($_POST["birthday"]);
-echo ($_POST["job"]);
-echo ($_POST["biographie"]);
 if( count($_POST) == 5
 && !empty($_POST["name"])
 && !empty($_POST["surname"])
 && isset($_POST["birthday"])
-&& !empty($_POST["job"])
+&& !empty($_POST["Job"])
 && isset($_POST["biographie"])){
 
   $error = false;
@@ -25,7 +21,7 @@ if( count($_POST) == 5
 $_POST["name"] = trim($_POST["name"]);
 $_POST["surname"] = trim($_POST["surname"]);
 $_POST["birthday"] = trim($_POST["birthday"]);
-$_POST["job"] = trim($_POST["job"]);
+$_POST["job"] = trim($_POST["Job"]);
 $_POST["biographie"] = trim($_POST["biographie"]);
 
 
@@ -103,7 +99,7 @@ if( strlen($_POST["birthday"]) == 10 ){
 
 
   $query = $db->prepare('SELECT Id FROM staff WHERE Name=:Name');
-  $query->execute(["Name" => $_POST["Name"]]);
+  $query->execute(["Name" => $_POST["name"]]);
   $resultat = $query->fetch();
 
   if( !empty($resultat)){

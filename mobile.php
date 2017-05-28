@@ -20,7 +20,26 @@ session_start();
 
 <body>
 
+  <SCRIPT LANGUAGE="JavaScript">
+  <!-- Disable
+  function disableselect(e){
+  return false
+  }
 
+  function reEnable(){
+  return true
+  }
+
+  //if IE4+
+  document.onselectstart=new Function ("return false")
+  document.oncontextmenu=new Function ("return false")
+  //if NS6
+  if (window.sidebar){
+  document.onmousedown=disableselect
+  document.onclick=reEnable
+  }
+  //-->
+  </script>
   <!-- les cookies -->
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />

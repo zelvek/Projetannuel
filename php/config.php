@@ -31,7 +31,35 @@ $listOfGender = [
                     "o" => "Autre"
 
 ];
+$listOfGenre = [
+                  "ac"=>"action",
+                  "sf"=> "science-fiction",
+                  "ab"=> "Absurbe",
+                  "ad"=> "Avanture",
+                  "co"=> "Commedie",
+                  "cr"=> "Criminel",
+                  "dr"=> "Drame",
+                  "fn"=> "Fantasy",
+                  "hi"=> "Historique",
+                  "ah"=> "Histoire-Alternative",
+                  "ho"=> "Horreur",
+                  "ph"=> "Philosophie",
+                  "po"=> "Politique",
+                  "ro"=> "Romance",
+                  "sg"=> "Saga Des Gemeaux",
+                  "sa"=> "Satire",
+                  "sl"=> "Tranche De Vie",
+                  "th"=> "Thriller",
+                  "ur"=> "Urbain",
+                  "we"=> "Western",
+                  "me"=> "Mecha",
+                  "ec"=> "echi",
+                  "yu"=> "yuri",
+                  "ya"=> "yaoi",
+                  "mg"=> "Magical Girl"
 
+
+                ];
 $listOfErrors = [
 
                     1 =>"le nom doit faire entre 5 et 50 caractères",

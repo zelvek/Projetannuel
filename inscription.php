@@ -52,7 +52,7 @@ echo "<label>".$gender.'  : <input type="radio" '.( ($key == $genderDefault)?'ch
 
 <input type="text" name="surname"placeholder="Votre surname"value="<?php echo (isset($data_form["surname"]))?$data_form["surname"]:"";?>"><br>
 <input type="text" name="nickname"placeholder="Votre nickname"value="<?php echo (isset($data_form["nickname"]))?$data_form["nickname"]:"";?>" required="required" ><br>
-<input type="date" name="birthday" value="<?php echo (isset($data_form["birthday"]))?$data_form["birthday"]:"";?>" required="required"><br>
+<input type="date" placeholder="Votre date de naissance" name="birthday" value="<?php echo (isset($data_form["birthday"]))?$data_form["birthday"]:"";?>" required="required"><br>
 <input type="email" name="email" value="<?php echo (isset($data_form["email"]))?$data_form["email"]:"";?>" required="required" placeholder="Votre email"><br>
 <input type="password" name="pwd" value="" required="required" placeholder="Votre mdp"><br>
 <input type="password" name="pwd2" value=""  required="required" placeholder="confirmation"><br>
